@@ -49,8 +49,8 @@ function SecondSection() {
           role="Frontend Developer"
           isLive
           title="Support Page for Hei whatsapp Chatbot"
-          githubRepo="kk"
-          alt="Hei"
+          githubRepo="https://github.com/webdev-steve01/CBT-PROJECT.git"
+          alt="cbt-project.vercel.app"
         />
       </section>
     </div>
