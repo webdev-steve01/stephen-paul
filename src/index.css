@@ -8,13 +8,14 @@
   -webkit-user-select: none;
   user-select: none;
 }
+
 a {
   text-underline-offset: 4px;
 }
 body {
   background-color: #0a0a0a;
   color: white;
-  padding: 0 1em;
+  padding: 0 1.5em;
   font-family: Arial, Helvetica, sans-serif;
 }
 img {
@@ -217,6 +218,8 @@ button {
 }
 .about-title {
   display: none;
+  min-width: 350px;
+  width: 100%;
 }
 .about-text {
   color: #c7c7c7;
@@ -229,6 +232,9 @@ button {
 }
 .about-text-head {
   display: none;
+}
+.about-article {
+  /* border: 1px solid red; */
 }
 .more-about-link,
 .more-about-link:hover,
@@ -269,6 +275,11 @@ button {
   padding: 0.7em;
   min-width: 200px;
   font-size: 1.3em;
+}
+.connect-article {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
 }
 /* ! media queries */
 @media screen and (max-width: 790px) {
@@ -396,9 +407,13 @@ button {
   .about-text-head,
   .about-title {
     display: block;
+    /* border: 1px solid red; */
+    min-width: 500px;
   }
   .about-text {
-    min-width: 400px;
+  }
+  .about-article {
+    width: 100%;
   }
   .about-text-head {
     font-size: 1.3em;
@@ -418,25 +433,50 @@ button {
   }
   .connect {
     display: flex;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     /* justify-content: space-between; */
     align-items: flex-start;
-  }
-  .connect-form {
     width: 100%;
+    justify-content: space-between;
+    padding: 2em 1em;
+  }
+  .connect .connect-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    max-width: 900px;
+    /* min-width: 600px; */
     /* min-height: ; */
     /* flex-grow: 2; */
     /* border: 1px solid red; */
-    flex-basis: 100%;
-    max-width: none;
+    /* flex-basis: 100%; */
+    /* max-width: none; */
+  }
+  .form-child {
+    width: 100%;
+    /* border: red 1px solid; */
+    /* border: 1px solid red; */
   }
   .Input {
     width: 100%;
+  }
+  .connect-body {
+    display: flex;
+    align-items: center;
+    /* min-width: 300px; */
+    width: 100%;
+    min-width: 500px;
+    /* border: 1px solid red; */
   }
 }
 @media screen and (min-width: 500px) {
   .connect-header {
     font-size: 2.5em;
+  }
+  .connect-body {
+    /* border: 1px solid red; */
+    /* min-width: 400px; */
   }
   /* .connect-text {
     font-size: 1.2em;
