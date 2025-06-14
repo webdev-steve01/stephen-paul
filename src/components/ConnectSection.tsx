@@ -1,5 +1,5 @@
 // Removed "use client"; as it's specific to Next.js App Router and not needed for plain React/Vite.
-import React, { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect } from "react";
 // Ensure you have installed this package: npm install @emailjs/browser or yarn add @emailjs/browser
 import emailjs from "@emailjs/browser"; // Import EmailJS library
 

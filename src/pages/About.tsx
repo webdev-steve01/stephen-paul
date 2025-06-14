@@ -1,4 +1,3 @@
-import React from "react";
 import ABoutFirst from "../components/AboutParts/AboutFirst";
 import AboutNav from "../components/Navigation/AboutNav";
 import Capabilities from "../components/AboutParts/Capabilities";

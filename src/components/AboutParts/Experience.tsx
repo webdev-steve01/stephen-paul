@@ -1,5 +1,3 @@
-import React from "react";
-
 function Experience() {
   return (
     <div className="capabilities-section" id="Experience">

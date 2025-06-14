@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import Hamburger from "../../assets/hamburger.svg";
 import cancel from "../../assets/cancel-close-delete-svgrepo-com.svg";
 

@@ -1,9 +1,6 @@
-import React from "react";
-import AboutNav from "../Navigation/AboutNav";
 import arrow from "../../assets/bx-download.svg.svg";
 import linkedin from "../../assets/linkedin.svg";
 import github from "../../assets/github.svg";
-import image from "../../assets/me/og-steve-no-bg.png";
 
 function ABoutFirst() {
   return (

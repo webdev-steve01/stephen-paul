@@ -1,5 +1,3 @@
-import React from "react";
-
 function Capabilities() {
   return (
     <div id="Capabilities" className="capabilities-section">
