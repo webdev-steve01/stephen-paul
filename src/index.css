@@ -8,7 +8,9 @@
   -webkit-user-select: none;
   user-select: none;
 }
-
+html {
+  scroll-behavior: smooth;
+}
 a {
   text-underline-offset: 4px;
 }
@@ -16,7 +18,7 @@ body {
   background-color: #0a0a0a;
   color: white;
   padding: 0 2em;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Outfit", sans-serif;
 }
 img {
   width: 100%;
@@ -27,7 +29,14 @@ button {
   padding: 0;
   background-color: #d3e97a;
 }
-
+h1,
+h2,
+h3 {
+  font-family: "Roboto Condensed", sans-serif; /* Use Roboto Condensed for headings */
+}
+.my-name {
+  font-family: "Edu NSW ACT Hand Pre", cursive; /* Use the unique hand-drawn font for specific elements */
+}
 .NavList-desktop {
   list-style: none;
   display: flex;
@@ -65,6 +74,8 @@ button {
 .image-skeleton {
   /* width: 100%;
   height: 100%; */
+  /* border: 1px solid red; */
+  margin: 0 auto;
   background-color: gray;
   border-radius: 10px;
   border-radius: 10px;
@@ -76,7 +87,7 @@ button {
   min-width: 300px;
   width: 100%;
   height: 100%;
-  display: flex;
+  /* display: flex; */
 }
 .First-section {
   padding: 2em 0;
@@ -119,12 +130,13 @@ button {
   width: 100%;
   max-width: 1100px;
   margin: 0 auto;
+  /* border: 1px solid red; */
   /* max-width: 400px; */
 }
 
 .my-image {
   /* border: 1px solid green; */
-  background: url("./assets//me//stephen2.jpg");
+  background: url("./assets//me//Stephen.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -213,7 +225,8 @@ button {
 }
 
 /* * About section styling */
-.about-section {
+.about-section,
+.capabilities-section {
   padding: 1em 0;
 }
 .about-title {
@@ -281,8 +294,116 @@ button {
   flex-direction: column;
   gap: 0.5em;
 }
+
+/* ! About page styles */
+.about-title-main {
+  display: flex;
+}
+.about-title-main .about-title-head,
+.capabilities-title {
+  /* display: flex; */
+  font-size: 2em;
+}
+.about-text-head-main {
+  display: flex;
+  font-weight: 500;
+  /* font-size: 1.5em; */
+}
+.p-main {
+  font-size: 0.8em;
+}
+.about-main {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4em;
+}
+.download-resume {
+  display: flex;
+  justify-content: flex-start;
+  /* border: 1px solid red; */
+  max-width: 500px;
+  gap: 0.5em;
+  padding: 0.5em 0;
+}
+.about-image-container {
+  background-color: #c7c7c7;
+  display: grid;
+  place-content: center;
+  max-width: 900px;
+  margin: auto;
+  border-radius: 16px;
+  overflow: hidden;
+}
+.about-image {
+  max-width: 400px;
+  display: inline-block;
+  /* border: 1px solid black; */
+  margin: auto;
+}
+.capabilities-text {
+  font-weight: 400;
+  line-height: 30px;
+}
+.capabilities-list {
+  /* border: 1px solid red; */
+  padding: 1em 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5em;
+  max-width: 400px;
+}
+.capabilities-section {
+  padding: 3em 0;
+}
+.capabilities-list--child {
+  border: 1px solid gray;
+  display: inline-block;
+  border-radius: 23px;
+  padding: 0.5em;
+  /* max-width: 100px; */
+}
+.capabilities-title {
+  font-size: 1.5em;
+  padding: 0.5em 0;
+}
+
+/* * experience section */
+.work-title-and-date {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  justify-content: space-between;
+  color: #c7c7c7;
+  /* font-size: 0.8em; */
+  font-weight: 500;
+}
+.work {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+.work-description {
+  color: #c7c7c7;
+  line-height: 30px;
+  /* font-size: 0.em; */
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+.work-description-item {
+  font-size: 0.9em;
+}
+.job {
+  font-size: 0.7em;
+}
+.experience-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+
 /* ! media queries */
-@media screen and (max-width: 790px) {
+@media screen and (max-width: 832px) {
   .NavList-desktop {
     display: none;
   }
@@ -296,15 +417,18 @@ button {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 1rem;
+    gap: 0.5rem;
     position: absolute;
     top: 80px;
     bottom: 0;
     width: 100%;
-    height: 200px;
+    height: 250px;
     right: 0;
     text-align: center;
     background-color: #161616;
+    padding: 0.4em 0;
+    border-radius: 8px;
+    overflow: hidden;
   }
 
   .NavList-mobile .NavItem .NavLink {
@@ -324,7 +448,7 @@ button {
   .NavLink:hover {
     color: #c7c7c7;
     text-decoration: none;
-    background-color: #0a0a0a;
+    background-color: rgb(18, 18, 18);
   }
   .NavItem {
     width: 100%;
@@ -375,6 +499,22 @@ button {
   }
 }
 @media screen and (min-width: 1024px) {
+  .about-main {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5em;
+  }
+  .capabilities-title {
+    min-width: 350px;
+  }
+  .about-text-main {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3em;
+  }
+  .about-text-head-main {
+    font-size: 1.5em;
+  }
   .header {
     font-size: 2.5em;
     text-align: left;
@@ -395,9 +535,38 @@ button {
   .my-image {
     min-height: 500px;
   }
+  .capabilities-section {
+    /* border: 1px solid red; */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .capabilities-text {
+    max-width: 600px;
+  }
+  .capabilities-title {
+    font-size: 2.5em;
+  }
+  .work-title-and-date {
+    display: flex;
+    justify-content: space-between;
+  }
+  .work {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+  }
+  .work-title-and-date {
+    flex-direction: row;
+  }
+  .experience-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    line-height: 30px;
+  }
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 900px) {
   .about-section {
     display: flex;
     padding: 3em 0;
@@ -406,13 +575,20 @@ button {
   }
   .about-text-head,
   .about-title {
-    display: block;
+    display: inline;
+    font-weight: 400;
+    font-size: 1.5em;
     /* border: 1px solid red; */
-    min-width: 500px;
+    /* min-width: 500px; */
   }
   .about-text {
+    /* border: 1px solid red; */
+  }
+  .about-text-p {
+    /* border: 1px solid red; */
   }
   .about-article {
+    /* width: 100%; */
     width: 100%;
   }
   .about-text-head {
@@ -422,8 +598,9 @@ button {
     margin-bottom: 0.5em;
   }
   .about-title {
-    /* border: 1px solid red; */
+    /* border: 1px solid blue; */
     width: 100%;
+
     display: flex;
     justify-content: flex-start;
     /* font-size: 4em; */
@@ -438,7 +615,7 @@ button {
     align-items: flex-start;
     width: 100%;
     justify-content: space-between;
-    padding: 2em 1em;
+    padding: 2em 0;
   }
   .connect .connect-form {
     width: 100%;
@@ -466,7 +643,7 @@ button {
     align-items: flex-start;
     /* min-width: 300px; */
     width: 100%;
-    min-width: 500px;
+    /* min-width: 300px; */
     /* border: 1px solid red; */
   }
 }

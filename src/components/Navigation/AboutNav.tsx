@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Hamburger from "../../assets/hamburger.svg";
 import cancel from "../../assets/cancel-close-delete-svgrepo-com.svg";
 
-function NavBar() {
+function AboutNav() {
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
   return (
@@ -10,18 +10,18 @@ function NavBar() {
       <div className="my-name">{"<Stephen Paul />"}</div>
       <ul className="NavList-desktop">
         <li className="NavItem">
-          <a href="#Home" className="NavLink">
+          <a href="./" className="NavLink">
             Home
           </a>
         </li>
         <li className="NavItem">
-          <a href="#Projects" className="NavLink">
-            Projects
+          <a href="#Capabilities" className="NavLink">
+            Capabilities
           </a>
         </li>
         <li className="NavItem">
-          <a href="#About" className="NavLink">
-            About
+          <a href="#Experience" className="NavLink">
+            Experience
           </a>
         </li>
         <li className="NavItem">
@@ -39,20 +39,20 @@ function NavBar() {
         />
       </div>
       {isOpen ? (
-        <ul className="NavList-mobile" onClick={() => setIsOpen(false)}>
+        <ul className="NavList-mobile">
           <li className="NavItem">
-            <a href="#Home" className="NavLink">
+            <a href="./" className="NavLink">
               Home
             </a>
           </li>
           <li className="NavItem">
             <a href="#Projects" className="NavLink">
-              Project
+              Capabilities
             </a>
           </li>
           <li className="NavItem">
             <a href="#About" className="NavLink">
-              About
+              Experience
             </a>
           </li>
           <li className="NavItem">
@@ -68,4 +68,4 @@ function NavBar() {
   );
 }
 
-export default NavBar;
+export default AboutNav;

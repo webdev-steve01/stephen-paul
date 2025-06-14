@@ -78,7 +78,7 @@ function ConnectSection() {
 
   return (
     // Reverted classNames to original (or removed if they were Tailwind-specific additions)
-    <section className="connect">
+    <section className="connect" id="Contact">
       <section className="connect-body">
         <h1 className="connect-header">Let’s connect</h1>
         <article className="connect-article">
@@ -93,7 +93,7 @@ function ConnectSection() {
           <div className="connect-socials">
             {/* Reverting image usage to original <img> tags and src attributes. */}
             <a
-              href="YOUR_LINKEDIN_PROFILE"
+              href="https://www.linkedin.com/in/osesojeh-sylvester-paul-2bb872286/"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -104,7 +104,7 @@ function ConnectSection() {
               />
             </a>
             <a
-              href="YOUR_GITHUB_PROFILE"
+              href="https://github.com/webdev-steve01"
               target="_blank"
               rel="noopener noreferrer"
             >

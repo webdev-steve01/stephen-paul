@@ -1,15 +1,17 @@
-import AboutSection from "./components/AboutSection";
-import ConnectSection from "./components/ConnectSection";
-import FirstSection from "./components/FirstSection";
-import SecondSection from "./components/SecondSection";
+import { Routes, Route } from "react-router-dom";
+import HomePage from "./pages/HomePage";
+import NotFoundPage from "./pages/NotFoundPage";
+import About from "./pages/About";
 
 function App() {
   return (
     <>
-      <FirstSection />
-      <SecondSection />
-      <AboutSection />
-      <ConnectSection />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="*" element={<NotFoundPage />} />
+        <Route path="/more-about-me" element={<About />} />
+        {/* You can add more routes here as needed */}
+      </Routes>
     </>
   );
 }
