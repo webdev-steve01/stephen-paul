@@ -8,7 +8,7 @@ function Experience() {
         <article className="work">
           <div className="work-title-and-date">
             <div>
-              <p>Virograf</p>
+              <p className="company">Virograf</p>
               <p className="job">FullStack Developer</p>
             </div>
             <p>Nov 2023 — Present </p>
@@ -26,7 +26,7 @@ function Experience() {
             </li>{" "}
             <li className="work-description-item">
               Collaborated directly with product/design to translate evolving
-              user needs into clean, functional, and scalable features.
+              user needs into clean,functional, and scalable features.
             </li>
             <li className="work-description-item">
               Maintained clean Git workflow practices, modular code structure,
@@ -37,7 +37,7 @@ function Experience() {
         <article className="work">
           <div className="work-title-and-date">
             <div>
-              <p> Archibuzz</p>
+              <p className="company"> Archibuzz</p>
               <p className="job">Frontend Developer</p>
             </div>
             <p>Oct 2024 — April 2025 </p>

@@ -24,7 +24,7 @@ function FirstSection() {
                 href="https://wa.me/2348163122231?text=Hello%20Stephen,%20I%20would%20like%20to%20discuss%20a%20project%20with%20you.%20Please%20let%20me%20know%20when%20you%20are%20available.%20Thank%20you"
                 className="contact-me"
               >
-                <p>CONTACT ME</p>
+                <p>Contact Me</p>
                 <div className="arrow">
                   <img src={arrow} alt="arrow" />
                 </div>

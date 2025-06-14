@@ -83,7 +83,7 @@ function ConnectSection() {
         <h1 className="connect-header">Let’s connect</h1>
         <article className="connect-article">
           <p className="connect-text">
-            Say hello at{" "}
+            Feel free to contact me at{" "}
             <a href="mailto:osesojehssp@gmail.com" className="connect-link">
               My Gmail
             </a>

@@ -18,7 +18,7 @@ body {
   background-color: #0a0a0a;
   color: white;
   padding: 0 2em;
-  font-family: "Outfit", sans-serif;
+  font-family: "Manrope", sans-serif;
 }
 img {
   width: 100%;
@@ -148,9 +148,10 @@ h3 {
   display: flex;
   align-items: center;
   gap: 0.5em;
-  padding: 0.5em;
+  padding: 0.5em 1em;
   background-color: #d3e97a;
   border-radius: 50px;
+  font-size: 0.8em;
 }
 .contact-me:link {
   background-color: #d3e97a;
@@ -161,6 +162,9 @@ h3 {
   background-color: #d3e97a;
   text-decoration: none;
   color: black;
+}
+.company {
+  font-weight: bolder;
 }
 .arrow {
   width: 40px;
@@ -246,9 +250,7 @@ h3 {
 .about-text-head {
   display: none;
 }
-.about-article {
-  /* border: 1px solid red; */
-}
+
 .more-about-link,
 .more-about-link:hover,
 .more-about-link:visited,
@@ -275,19 +277,32 @@ h3 {
   gap: 5px;
 }
 .Input {
-  padding: 0.5em;
-  background-color: #161616;
+  padding: 12px 16px;
+  background-color: rgba(78, 78, 78, 0.6);
   color: #c7c7c7;
   border-radius: 8px;
+  font-size: 16px;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+  transition: background-color 9999s ease-in-out 0s;
+  -webkit-text-fill-color: #fff !important;
 }
 .Input:focus-within {
   outline: none;
+}
+label {
+  font-size: 16px;
 }
 .Submit {
   align-self: flex-start;
   padding: 0.7em;
   min-width: 200px;
-  font-size: 1.3em;
+  font-size: 1em;
+  /* font-weight: 700; */
 }
 .connect-article {
   display: flex;
@@ -333,12 +348,27 @@ h3 {
   margin: auto;
   border-radius: 16px;
   overflow: hidden;
+  padding: 1em;
+  min-height: 400px;
+  background: url("./assets/me/Stephen.jpg");
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+}
+.about-image-skeleton {
+  /* border: 1px solid red; */
+  background-color: gray;
+  max-width: 900px;
+  border-radius: 16px;
+  margin: auto;
 }
 .about-image {
   max-width: 400px;
   display: inline-block;
-  /* border: 1px solid black; */
+  border: 1px solid black;
+  border-radius: 50%;
   margin: auto;
+  display: none;
 }
 .capabilities-text {
   font-weight: 400;
@@ -532,6 +562,9 @@ h3 {
     margin-left: 0;
     /* border: 1px solid red; */
   }
+  .capabilities-title {
+    padding: 0;
+  }
   .my-image {
     min-height: 500px;
   }
@@ -539,6 +572,8 @@ h3 {
     /* border: 1px solid red; */
     display: grid;
     grid-template-columns: 1fr 1fr;
+    align-self: start;
+    /* border: 1px solid red; */
   }
   .capabilities-text {
     max-width: 600px;
@@ -549,6 +584,8 @@ h3 {
   .work-title-and-date {
     display: flex;
     justify-content: space-between;
+    /* border: 1px solid red; */
+    align-items: flex-start;
   }
   .work {
     display: flex;
@@ -563,6 +600,9 @@ h3 {
     flex-direction: column;
     gap: 2em;
     line-height: 30px;
+  }
+  .about-image-container {
+    background-position: center;
   }
 }
 

@@ -3,7 +3,7 @@ import React from "react";
 function Capabilities() {
   return (
     <div id="Capabilities" className="capabilities-section">
-      <h1 className="capabilities-title">My Capabilities</h1>
+      <h1 className="capabilities-title">MY CAPABILITIES</h1>
       <div className="capabilities-content">
         <p className="capabilities-text">
           I'm a front-end developer with a Computer Science background, skilled

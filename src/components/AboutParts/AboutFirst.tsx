@@ -31,7 +31,7 @@ function ABoutFirst() {
                   className="contact-me resume"
                   download={"resume.pdf"}
                 >
-                  <p>DOWNLOAD RESUME</p>
+                  <p>Download Resume</p>
                   <div className="arrow">
                     <img src={arrow} alt="arrow" />
                   </div>
@@ -51,9 +51,11 @@ function ABoutFirst() {
           </section>
         </article>
       </section>
-      <section className="about-image-container">
-        <img src={image} alt="" className="about-image" />
-      </section>
+      <div className="about-image-skeleton">
+        <section className="about-image-container">
+          {/* <img loading="lazy" src={image} alt="" className="about-image" /> */}
+        </section>
+      </div>
     </div>
   );
 }
