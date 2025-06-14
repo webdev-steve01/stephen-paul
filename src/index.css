@@ -344,12 +344,12 @@ label {
   background-color: #c7c7c7;
   display: grid;
   place-content: center;
-  max-width: 900px;
+  /* max-width: 900px; */
   margin: auto;
   border-radius: 16px;
   overflow: hidden;
   padding: 1em;
-  min-height: 400px;
+  min-height: 500px;
   background: url("./assets/me/Stephen.jpg");
   background-size: cover;
   background-position: top;
@@ -358,7 +358,7 @@ label {
 .about-image-skeleton {
   /* border: 1px solid red; */
   background-color: gray;
-  max-width: 900px;
+  /* max-width: 900px; */
   border-radius: 16px;
   margin: auto;
 }
