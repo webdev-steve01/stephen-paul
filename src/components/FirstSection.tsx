@@ -35,7 +35,7 @@ function FirstSection() {
                 <img src={linkedin} alt="linkedin" />
               </div>
             </a>
-            <a href="https://github.com/osesojeh">
+            <a href="https://github.com/webdev-steve01">
               <div className="linkedin">
                 <img src={github} alt="linkedin" />
               </div>
