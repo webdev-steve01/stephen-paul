@@ -52,6 +52,7 @@ function SecondSection() {
           year="2025"
           role="Frontend Developer"
           isLive
+          isDesktop
           title="A Fully Functional CBT Platform"
           githubRepo="https://github.com/webdev-steve01/CBT-PROJECT.git"
           alt="cbt-project.vercel.app"

@@ -21,7 +21,7 @@ body {
   /* border: 1px solid red; */
   width: 100vw;
   font-family: "Manrope", sans-serif;
-  /* overflow: hidden; */
+  overflow-x: hidden;
 }
 img {
   width: 100%;

@@ -23,7 +23,8 @@
 
 .online,
 .professional,
-.incomplete {
+.incomplete,
+.desktop {
   font-size: 0.8em;
   border: 1px solid green;
   padding: 0.2em 0.5em;
@@ -37,6 +38,10 @@
 .incomplete {
   color: red;
   border: 1px solid red;
+}
+.desktop {
+  color: yellow;
+  border: 1px solid yellow;
 }
 .image {
   border-radius: 8px;

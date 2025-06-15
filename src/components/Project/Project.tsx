@@ -11,6 +11,7 @@ type project = {
   githubRepo: string;
   isLive: boolean;
   isProfessional?: boolean;
+  isDesktop?: boolean;
   unCompleted?: boolean;
   alt: string;
 };
@@ -31,6 +32,7 @@ function Project(prop: project) {
           {prop.unCompleted && (
             <div className={style.incomplete}>incomplete</div>
           )}
+          {prop.isDesktop && <div className={style.desktop}>Desktop Only</div>}
         </div>
       </section>
 
