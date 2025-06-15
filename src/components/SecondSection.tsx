@@ -4,7 +4,7 @@ import netflix from "../assets/portfolio/netflix.png";
 import cbt from "../assets/portfolio/cbt.png";
 
 const HeiDesc: string =
-  "Teamed up with a designer to breathe life into a promotional webpage for our beloved show, Adventure Time. Delivered a fully responsive design with dynamic content capabilities, seamlessly integrating a newsletter feature to keep fans updated with the latest adventures.";
+  "At Hei, I developed and delivered a comprehensive support page to enhance the user experience for our WhatsApp chatbot. This crucial resource provides students with seamless access to information and assistance, ensuring their campus life is efficient and smooth by addressing common queries and service needs.";
 const NetflixDesc: string =
   "Developed a Netflix-style movie platform that lets users explore and discover films in an interactive, responsive interface. Focused on delivering a smooth browsing experience with clean design, dynamic content loading, and intuitive navigation across devices.";
 const cbtDesc: string =

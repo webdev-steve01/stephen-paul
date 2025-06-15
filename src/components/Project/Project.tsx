@@ -59,7 +59,7 @@ function Project(prop: project) {
           ) : (
             <></>
           )}
-          <a href="" className={style.link}>
+          <a href={prop.githubRepo} className={style.link}>
             <p>GITHUB</p>
             <img className={style.linkImage} src={github} alt="arrow" />
           </a>
