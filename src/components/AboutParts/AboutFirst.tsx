@@ -1,13 +1,14 @@
 import arrow from "../../assets/bx-download.svg.svg";
 import linkedin from "../../assets/linkedin.svg";
 import github from "../../assets/github.svg";
+import TypewriterComponent from "../motions/TypewriterComponent";
 
 function ABoutFirst() {
   return (
     <div>
       <section className="about-section about-main" id="About">
         <section className="about-title about-title-main">
-          <h1 className="about-title-head">ABOUT ME</h1>
+          <TypewriterComponent text="ABOUT ME" classname="about-title-head" />
         </section>
         <article className="about-article">
           <section className="about-text about-text-main">

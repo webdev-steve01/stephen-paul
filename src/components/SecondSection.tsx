@@ -32,7 +32,7 @@ function SecondSection() {
           githubRepo="https://github.com/webdev-steve01/Hei-support-page.git"
           alt="Hei"
           isProfessional
-          liveLink="https://hei-support-page.vercel.app/"
+          liveLink="http://www.heiservicebot.com.ng"
         />
         <Project
           image={netflix}

@@ -1,8 +1,10 @@
+import TypewriterComponent from "./motions/TypewriterComponent";
+
 function AboutSection() {
   return (
     <section className="about-section" id="About">
       <section className="about-title">
-        <h1 className="about-title-head">ABOUT ME</h1>
+        <TypewriterComponent text="About Me" classname="about-title-head" />
       </section>
       <article className="about-article">
         <section className="about-text">

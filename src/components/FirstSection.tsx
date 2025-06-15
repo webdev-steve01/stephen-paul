@@ -2,6 +2,8 @@ import NavBar from "./Navigation/NavBar";
 import arrow from "../assets/contact-me.svg";
 import linkedin from "../assets/linkedin.svg";
 import github from "../assets/github.svg";
+// import { motion } from "framer-motion";
+import TypewriterComponent from "./motions/TypewriterComponent";
 
 function FirstSection() {
   return (
@@ -12,7 +14,10 @@ function FirstSection() {
       <section className="First" id="">
         <section className="first-top">
           <section className="First-section">
-            <h1 className="header">HI, I AM STEPHEN PAUL</h1>
+            <TypewriterComponent
+              text="HI, I AM STEPHEN PAUL"
+              classname="header"
+            />
             <p className="about-intro">
               A Nigeria based front-end engineer with 4+ years of experience
               passionate about building accessible and user friendly websites.
