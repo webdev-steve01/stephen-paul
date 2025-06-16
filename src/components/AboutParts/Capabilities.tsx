@@ -15,11 +15,13 @@ function Capabilities() {
           <div className="capabilities-list--child">HTML</div>
           <div className="capabilities-list--child">CSS</div>
           <div className="capabilities-list--child">JavaScript</div>
-          <div className="capabilities-list--child">MERN</div>
+          <div className="capabilities-list--child">React</div>
           <div className="capabilities-list--child">Next.js</div>
           <div className="capabilities-list--child">Mobile First design</div>
           <div className="capabilities-list--child">Tailwind</div>
           <div className="capabilities-list--child">Typescript</div>
+          <div className="capabilities-list--child">Nodejs</div>
+          <div className="capabilities-list--child">Mongodb</div>
         </div>
       </div>
     </div>
