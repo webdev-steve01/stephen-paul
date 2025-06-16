@@ -2,7 +2,6 @@ import Project from "./Project/Project";
 import Hei from "../assets/portfolio/Hei.png";
 import netflix from "../assets/portfolio/netflix.png";
 import cbt from "../assets/portfolio/cbt.png";
-import { Typewriter } from "react-simple-typewriter";
 import TypewriterComponent from "./motions/TypewriterComponent";
 
 const HeiDesc: string =
