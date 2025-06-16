@@ -24,7 +24,7 @@ function FirstSection() {
         <section className="first-top">
           <section className="First-section">
             <TypewriterComponent
-              text="HI, I AM STEPHEN PAUL"
+              text="HI, I AM STEPHEN SYLVESTER-PAUL"
               classname="header"
             />
             <p className="about-intro" ref={ref}>
