@@ -92,7 +92,7 @@ function ConnectSection() {
           <p className="connect-text">
             For more info, here is my{" "}
             <a
-              href="/resume_stephen_sylvester-paul.pdf"
+              href="/my-resume.pdf"
               download={"resume.pdf"}
               className="connect-link"
             >

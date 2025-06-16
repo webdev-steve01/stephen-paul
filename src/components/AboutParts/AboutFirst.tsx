@@ -36,7 +36,7 @@ function ABoutFirst() {
             <section className="download-resume">
               <button type="button" className="">
                 <a
-                  href="/resume_stephen_sylvester-paul.pdf"
+                  href="/my-resume.pdf"
                   className="contact-me resume"
                   download={"resume.pdf"}
                 >
