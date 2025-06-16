@@ -27,7 +27,7 @@ function FirstSection() {
               text="HI, I AM STEPHEN PAUL"
               classname="header"
             />
-            <p className="about-intro">
+            <p className="about-intro" ref={ref}>
               A Nigeria based front-end engineer with 4+ years of experience
               passionate about building accessible and user friendly websites.
             </p>
@@ -57,7 +57,7 @@ function FirstSection() {
           </section>
         </section>
 
-        <section ref={ref} className="image-skeleton">
+        <section className="image-skeleton">
           <section className="my-image">
             {/* <img src={stephen} alt="me" /> */}
           </section>
