@@ -345,6 +345,7 @@ label {
 .capabilities-text {
   font-weight: 400;
   line-height: 30px;
+  font-size: 0.8em;
 }
 .capabilities-list {
   padding: 1em 0;

@@ -89,7 +89,16 @@ function ConnectSection() {
             </a>
             .
           </p>
-          <p className="connect-text">For more info, here is my resume</p>
+          <p className="connect-text">
+            For more info, here is my{" "}
+            <a
+              href="/resume_stephen_sylvester-paul.pdf"
+              download={"resume.pdf"}
+              className="connect-link"
+            >
+              resume
+            </a>
+          </p>
           <div className="connect-socials">
             {/* Reverting image usage to original <img> tags and src attributes. */}
             <a
