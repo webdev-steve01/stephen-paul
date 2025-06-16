@@ -2,6 +2,8 @@ import Project from "./Project/Project";
 import Hei from "../assets/portfolio/Hei.png";
 import netflix from "../assets/portfolio/netflix.png";
 import cbt from "../assets/portfolio/cbt.png";
+import { Typewriter } from "react-simple-typewriter";
+import TypewriterComponent from "./motions/TypewriterComponent";
 
 const HeiDesc: string =
   "At Hei, I developed and delivered a comprehensive support page to enhance the user experience for our WhatsApp chatbot. This crucial resource provides students with seamless access to information and assistance, ensuring their campus life is efficient and smooth by addressing common queries and service needs.";
@@ -14,7 +16,10 @@ function SecondSection() {
   return (
     <div className="Second" id="Projects">
       <article className="second-article">
-        <h1 className="second-header">Featured Projects</h1>
+        <TypewriterComponent
+          text="Featured Projects"
+          classname="second-header"
+        />
         <p className="second-text">
           Here are some of the selected projects that showcase my passion for
           front-end development.

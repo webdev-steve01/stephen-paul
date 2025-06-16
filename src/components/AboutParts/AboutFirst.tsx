@@ -2,11 +2,22 @@ import arrow from "../../assets/bx-download.svg.svg";
 import linkedin from "../../assets/linkedin.svg";
 import github from "../../assets/github.svg";
 import TypewriterComponent from "../motions/TypewriterComponent";
+import AboutNav from "../Navigation/AboutNav";
+import { useInView } from "react-intersection-observer";
+import { useEffect } from "react";
 
 function ABoutFirst() {
+  const { ref, inView } = useInView({
+    threshold: 0.3,
+  });
+  useEffect(() => {
+    console.log("inView:", inView);
+  }, [inView]);
+
   return (
     <div>
-      <section className="about-section about-main" id="About">
+      <AboutNav classname={inView ? "" : "fixed"} />
+      <section ref={ref} className="about-section about-main" id="About">
         <section className="about-title about-title-main">
           <TypewriterComponent text="ABOUT ME" classname="about-title-head" />
         </section>

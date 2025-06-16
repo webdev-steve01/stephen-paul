@@ -2,11 +2,15 @@ import { useState } from "react";
 import Hamburger from "../../assets/hamburger.svg";
 import cancel from "../../assets/cancel-close-delete-svgrepo-com.svg";
 
-function AboutNav() {
+type Props = {
+  classname?: string;
+};
+
+function AboutNav({ classname }: Props) {
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
   return (
-    <div className="Navbar">
+    <div className={`Navbar ${classname}`}>
       <div className="my-name">{"<Stephen Paul />"}</div>
       <ul className="NavList-desktop">
         <li className="NavItem">

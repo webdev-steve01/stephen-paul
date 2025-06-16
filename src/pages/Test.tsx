@@ -1,8 +1,12 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
+import { useInView } from "react-intersection-observer";
 
 function Test() {
   const [leave, setLeave] = useState(false);
+  const { ref, inView } = useInView({
+    threshold: 0,
+  });
   return (
     <div
       style={{
@@ -11,6 +15,7 @@ function Test() {
         height: "100vh",
         backgroundColor: "#f0f0f0",
       }}
+      ref={ref}
     >
       <motion.button layout onClick={() => setLeave(!leave)}>
         Exit
@@ -23,6 +28,7 @@ function Test() {
               scale: 0,
               y: 0,
             }}
+            ref={ref}
             animate={{ rotate: "360deg", scale: 1, y: [0, 150, -150, -150, 0] }}
             style={{
               border: "2px solid #000",
@@ -38,7 +44,7 @@ function Test() {
               // repeat: Infinity,
             }}
           >
-            framer
+            {`inView: ${inView}`}
           </motion.div>
         )}
       </AnimatePresence>

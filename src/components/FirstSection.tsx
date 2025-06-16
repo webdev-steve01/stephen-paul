@@ -3,15 +3,24 @@ import arrow from "../assets/contact-me.svg";
 import linkedin from "../assets/linkedin.svg";
 import github from "../assets/github.svg";
 // import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 import TypewriterComponent from "./motions/TypewriterComponent";
+import { useEffect } from "react";
 
 function FirstSection() {
+  const { ref, inView } = useInView({
+    threshold: 0.3,
+  });
+  useEffect(() => {
+    console.log("inView:", inView);
+  }, [inView, ref]);
+  // })
   return (
     <section>
       <>
-        <NavBar />
+        <NavBar classname={inView ? "" : "fixed"} />
       </>
-      <section className="First" id="">
+      <section className="First" id="Home">
         <section className="first-top">
           <section className="First-section">
             <TypewriterComponent
@@ -48,7 +57,7 @@ function FirstSection() {
           </section>
         </section>
 
-        <section className="image-skeleton">
+        <section ref={ref} className="image-skeleton">
           <section className="my-image">
             {/* <img src={stephen} alt="me" /> */}
           </section>

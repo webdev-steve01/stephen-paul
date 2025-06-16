@@ -1,12 +1,15 @@
 import { useState } from "react";
 import Hamburger from "../../assets/hamburger.svg";
 import cancel from "../../assets/cancel-close-delete-svgrepo-com.svg";
+type props = {
+  classname?: string;
+};
 
-function NavBar() {
+function NavBar({ classname }: props) {
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
   return (
-    <div className="Navbar">
+    <div className={`Navbar ${classname}`}>
       <div className="my-name">{"<Stephen Paul />"}</div>
       <ul className="NavList-desktop">
         <li className="NavItem">

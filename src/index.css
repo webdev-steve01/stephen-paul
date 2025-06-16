@@ -18,7 +18,6 @@ body {
   background-color: #0a0a0a;
   color: white;
   padding: 0 1em;
-  /* border: 1px solid red; */
   width: 100vw;
   font-family: "Manrope", sans-serif;
   overflow-x: hidden;
@@ -35,10 +34,10 @@ button {
 h1,
 h2,
 h3 {
-  font-family: "Roboto Condensed", sans-serif; /* Use Roboto Condensed for headings */
+  font-family: "Roboto Condensed", sans-serif;
 }
 .my-name {
-  font-family: "Edu NSW ACT Hand Pre", cursive; /* Use the unique hand-drawn font for specific elements */
+  font-family: "Edu NSW ACT Hand Pre", cursive;
 }
 .NavList-desktop {
   list-style: none;
@@ -47,7 +46,6 @@ h3 {
   gap: 1rem;
 }
 .NavList-desktop .NavItem .NavLink {
-  /* border: 1px solid blue; */
   width: 100%;
   padding: 0.5em;
   display: block;
@@ -60,45 +58,34 @@ h3 {
   color: #c7c7c7;
   text-decoration: none;
 }
-
 .Navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1em 0;
   position: relative;
+  transition: all 0.5s ease-in-out;
 }
-
 .image-ham {
   display: none;
 }
-
-/** styling for first section */
 .image-skeleton {
-  /* width: 100%;
-  height: 100%; */
-  /* border: 1px solid red; */
   margin: 0 auto;
   background-color: gray;
   border-radius: 10px;
-  border-radius: 10px;
   display: flex;
-  /* align-items: center; */
   min-height: 400px;
   max-height: 500px;
   max-width: 400px;
   min-width: 300px;
   width: 100%;
   height: 100%;
-  /* display: flex; */
 }
 .First-section {
   padding: 2em 0;
   display: flex;
   flex-direction: column;
   gap: 0.5em;
-  /* max-width: 350px; */
-  /* border: 1px solid red; */
 }
 .header {
   font-size: 2em;
@@ -106,7 +93,6 @@ h3 {
   max-width: 330px;
   line-height: 45px;
   min-width: 300px;
-  /* border: 1px solid red; */
   margin: 0;
 }
 .about-intro {
@@ -121,8 +107,6 @@ h3 {
   display: flex;
   align-items: center;
   gap: 0.5em;
-  /* justify-content: space-between; */
-  /* max-width: 400px; */
 }
 .First {
   display: flex;
@@ -134,14 +118,9 @@ h3 {
   min-height: 85vh;
   align-items: center;
   width: 100%;
-  /* max-width: 1100px; */
   margin: 0 auto;
-  /* border: 1px solid red; */
-  /* max-width: 400px; */
 }
-
 .my-image {
-  /* border: 1px solid green; */
   background: url("./assets//me//Stephen.jpg");
   background-size: cover;
   background-position: center;
@@ -182,8 +161,6 @@ h3 {
   border-radius: 50%;
   background-color: black;
 }
-
-/* * connect styling */
 .connect {
   padding: 1em 0;
 }
@@ -209,8 +186,6 @@ h3 {
 .connect-link:link {
   color: #c7c7c7;
 }
-
-/* * Second section styles */
 .Second {
   padding: 1.5em 0;
   border-bottom: 1px solid #c7c7c7;
@@ -236,8 +211,6 @@ h3 {
   flex-direction: column;
   gap: 1em;
 }
-
-/* * About section styling */
 .about-section,
 .capabilities-section {
   padding: 1em 0;
@@ -259,7 +232,6 @@ h3 {
 .about-text-head {
   display: none;
 }
-
 .more-about-link,
 .more-about-link:hover,
 .more-about-link:visited,
@@ -311,27 +283,22 @@ label {
   padding: 0.7em;
   min-width: 200px;
   font-size: 1em;
-  /* font-weight: 700; */
 }
 .connect-article {
   display: flex;
   flex-direction: column;
   gap: 0.5em;
 }
-
-/* ! About page styles */
 .about-title-main {
   display: flex;
 }
 .about-title-main .about-title-head,
 .capabilities-title {
-  /* display: flex; */
   font-size: 2em;
 }
 .about-text-head-main {
   display: flex;
   font-weight: 500;
-  /* font-size: 1.5em; */
 }
 .p-main {
   font-size: 0.8em;
@@ -344,7 +311,6 @@ label {
 .download-resume {
   display: flex;
   justify-content: flex-start;
-  /* border: 1px solid red; */
   max-width: 500px;
   gap: 0.5em;
   padding: 0.5em 0;
@@ -353,7 +319,6 @@ label {
   background-color: #c7c7c7;
   display: grid;
   place-content: center;
-  /* max-width: 900px; */
   margin: auto;
   border-radius: 16px;
   overflow: hidden;
@@ -365,9 +330,7 @@ label {
   background-repeat: no-repeat;
 }
 .about-image-skeleton {
-  /* border: 1px solid red; */
   background-color: gray;
-  /* max-width: 900px; */
   border-radius: 16px;
   margin: auto;
 }
@@ -384,7 +347,6 @@ label {
   line-height: 30px;
 }
 .capabilities-list {
-  /* border: 1px solid red; */
   padding: 1em 0;
   display: flex;
   flex-wrap: wrap;
@@ -399,21 +361,17 @@ label {
   display: inline-block;
   border-radius: 23px;
   padding: 0.5em;
-  /* max-width: 100px; */
 }
 .capabilities-title {
   font-size: 1.5em;
   padding: 0.5em 0;
 }
-
-/* * experience section */
 .work-title-and-date {
   display: flex;
   flex-direction: column;
   gap: 0.5em;
   justify-content: space-between;
   color: #c7c7c7;
-  /* font-size: 0.8em; */
   font-weight: 500;
 }
 .work {
@@ -424,7 +382,6 @@ label {
 .work-description {
   color: #c7c7c7;
   line-height: 30px;
-  /* font-size: 0.em; */
   display: flex;
   flex-direction: column;
   gap: 0.5em;
@@ -440,8 +397,6 @@ label {
   flex-direction: column;
   gap: 2em;
 }
-
-/* ! media queries */
 @media screen and (max-width: 832px) {
   .NavList-desktop {
     display: none;
@@ -469,9 +424,7 @@ label {
     border-radius: 8px;
     overflow: hidden;
   }
-
   .NavList-mobile .NavItem .NavLink {
-    /* border: 1px solid blue; */
     width: 100%;
     padding: 0.5em;
     display: block;
@@ -499,10 +452,8 @@ label {
     align-items: flex-start;
   }
 }
-
 @media screen and (min-width: 450px) {
   .first-top {
-    /* border: 1px solid red; */
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -522,14 +473,12 @@ label {
   .header {
     max-width: 400px;
     margin: 0 auto;
-    /* font-size: 6em; */
   }
   .my-image {
     width: 100%;
     margin: 0 auto;
   }
 }
-
 @media screen and (min-width: 800px) {
   .second-header {
     font-size: 2em;
@@ -565,12 +514,10 @@ label {
     text-align: left;
   }
   .intro-contact {
-    /* border: 1px solid red; */
     margin-right: auto;
   }
   .First-section {
     margin-left: 0;
-    /* border: 1px solid red; */
   }
   .capabilities-title {
     padding: 0;
@@ -579,11 +526,9 @@ label {
     min-height: 500px;
   }
   .capabilities-section {
-    /* border: 1px solid red; */
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-self: start;
-    /* border: 1px solid red; */
   }
   .capabilities-text {
     max-width: 600px;
@@ -594,7 +539,6 @@ label {
   .work-title-and-date {
     display: flex;
     justify-content: space-between;
-    /* border: 1px solid red; */
     align-items: flex-start;
   }
   .work {
@@ -615,12 +559,10 @@ label {
     background-position: center;
   }
 }
-
 @media screen and (min-width: 900px) {
   .about-section {
     display: flex;
     padding: 3em 0;
-    /* border: 1px solid red; */
     justify-content: space-between;
   }
   .about-text-head,
@@ -628,17 +570,8 @@ label {
     display: inline;
     font-weight: 400;
     font-size: 1.5em;
-    /* border: 1px solid red; */
-    /* min-width: 500px; */
-  }
-  .about-text {
-    /* border: 1px solid red; */
-  }
-  .about-text-p {
-    /* border: 1px solid red; */
   }
   .about-article {
-    /* width: 100%; */
     width: 100%;
   }
   .about-text-head {
@@ -648,20 +581,15 @@ label {
     margin-bottom: 0.5em;
   }
   .about-title {
-    /* border: 1px solid blue; */
     width: 100%;
-
     display: flex;
     justify-content: flex-start;
-    /* font-size: 4em; */
   }
   .about-title-head {
     font-size: 2em;
   }
   .connect {
     display: flex;
-    /* border: 1px solid red; */
-    /* justify-content: space-between; */
     align-items: flex-start;
     width: 100%;
     justify-content: space-between;
@@ -673,17 +601,9 @@ label {
     flex-direction: column;
     padding: 0;
     max-width: 900px;
-    /* min-width: 600px; */
-    /* min-height: ; */
-    /* flex-grow: 2; */
-    /* border: 1px solid red; */
-    /* flex-basis: 100%; */
-    /* max-width: none; */
   }
   .form-child {
     width: 100%;
-    /* border: red 1px solid; */
-    /* border: 1px solid red; */
   }
   .Input {
     width: 100%;
@@ -691,21 +611,27 @@ label {
   .connect-body {
     display: flex;
     align-items: flex-start;
-    /* min-width: 300px; */
     width: 100%;
-    /* min-width: 300px; */
-    /* border: 1px solid red; */
   }
 }
 @media screen and (min-width: 500px) {
   .connect-header {
     font-size: 2.5em;
   }
-  .connect-body {
-    /* border: 1px solid red; */
-    /* min-width: 400px; */
+}
+.fixed {
+  position: fixed;
+  padding: 0.5em 1em;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #0a0a0a;
+  z-index: 1000;
+  transform: translateY(-100%);
+  animation: slideDown 0.5s ease forwards;
+}
+@keyframes slideDown {
+  to {
+    transform: translateY(0);
   }
-  /* .connect-text {
-    font-size: 1.2em;
-  } */
 }
