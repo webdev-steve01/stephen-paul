@@ -303,6 +303,9 @@ label {
 .p-main {
   font-size: 0.8em;
 }
+.resume-d {
+  display: none;
+}
 .about-main {
   display: flex;
   flex-direction: column;
@@ -461,6 +464,9 @@ label {
     flex-direction: column;
     align-items: center;
     text-align: center;
+  }
+  .resume-d {
+    display: inline;
   }
   .First-section {
     width: 70%;

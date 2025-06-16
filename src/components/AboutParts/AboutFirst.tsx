@@ -40,7 +40,9 @@ function ABoutFirst() {
                   className="contact-me resume"
                   download={"resume.pdf"}
                 >
-                  <p>Download Resume</p>
+                  <p>
+                    <span className="resume-d">Download</span> Resume
+                  </p>
                   <div className="arrow">
                     <img src={arrow} alt="arrow" />
                   </div>
