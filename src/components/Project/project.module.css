@@ -14,13 +14,9 @@
   border-radius: 20px;
   position: relative;
 }
-.border{
-  /* border: 1px solid red; */
-    /* background-color: #1a1a1a; */
-    /*  */
-    border-radius: 20px;
-    width: 100%;
-    padding: 1em;
+.border {
+  border-radius: 20px;
+  width: 100%;
 }
 .tags {
   position: absolute;
@@ -92,9 +88,6 @@
 .linkSection {
   display: flex;
   gap: 2em;
-  /* flex-direction: column; */
-  /* align-items: center; */
-  /* gap: 2em; */
 }
 
 .link {
@@ -121,20 +114,11 @@
 
 @media screen and (min-width: 580px) {
   .container {
-    /* width: 90%; */
-    /* max-width: 550px; */
     margin: auto;
   }
 }
 @media screen and (min-width: 700px) {
-  .projectTitle {
-    /* text-align: center; */
-  }
-  .container {
-    /* width: 90%; */
-  }
   .desc {
-    /* margin: auto; */
     width: 90%;
     max-width: 650px;
     font-size: 1em;
