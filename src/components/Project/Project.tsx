@@ -1,6 +1,7 @@
 import style from "./project.module.css";
 import arrow from "../../assets/arrow.svg";
 import github from "../../assets/bxl-github.svg.svg";
+
 type project = {
   image: string;
   title: string;
@@ -18,11 +19,11 @@ type project = {
 
 function Project(prop: project) {
   return (
-    <section className={style.container}>
+    <article className={style.container}>
       <section className={style.projectImageContainer}>
-        <div className={style.projectImage}>
+        <figure className={style.projectImage}>
           <img src={prop.image} alt={prop.alt} className={style.image} />
-        </div>
+        </figure>
 
         <div className={style.tags}>
           {prop.isLive && <div className={style.online}>Live</div>}
@@ -36,12 +37,14 @@ function Project(prop: project) {
         </div>
       </section>
 
-      <section>
+      <section className={style.border}>
         <section className={style.projectBody}>
-          <h1 className={style.projectTitle}>{prop.title}</h1>
+          <header>
+            <h2 className={style.projectTitle}>{prop.title}</h2>
+          </header>
           <p className={style.desc}>{prop.desc}</p>
-          <div className={style.moreInfo}>
-            <div className={style.projectInfo}>Project Info</div>
+          <section className={style.moreInfo}>
+            <h3 className={style.projectInfo}>Project Info</h3>
             <div className={style.projectInfoDetails}>
               <p>Year</p>
               <p className={style.detail}>{prop.year}</p>
@@ -50,24 +53,23 @@ function Project(prop: project) {
               <p>Role</p>
               <p className={style.detail}>{prop.role}</p>
             </div>
-          </div>
+          </section>
         </section>
-        <section className={style.linkSection}>
-          {prop.isLive ? (
-            <a href={prop.liveLink} className={style.link}>
+
+        <nav className={style.linkSection} aria-label={`Links to ${prop.title}`}>
+          {prop.isLive && (
+            <a href={prop.liveLink} className={style.link} target="_blank" rel="noopener noreferrer">
               <p>LIVE</p>
-              <img className={style.linkImage} src={arrow} alt="arrow" />
+              <img className={style.linkImage} src={arrow} alt="Live project link" />
             </a>
-          ) : (
-            <></>
           )}
-          <a href={prop.githubRepo} className={style.link}>
+          <a href={prop.githubRepo} className={style.link} target="_blank" rel="noopener noreferrer">
             <p>GITHUB</p>
-            <img className={style.linkImage} src={github} alt="arrow" />
+            <img className={style.linkImage} src={github} alt="GitHub repository link" />
           </a>
-        </section>
+        </nav>
       </section>
-    </section>
+    </article>
   );
 }
 

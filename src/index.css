@@ -86,6 +86,7 @@ h3 {
   display: flex;
   flex-direction: column;
   gap: 0.5em;
+  width: 100%;
 }
 .header {
   font-size: 2em;
@@ -121,7 +122,16 @@ h3 {
   margin: 0 auto;
 }
 .my-image {
-  background: url("./assets//me//Stephen.jpg");
+  background: url("https://res.cloudinary.com/dlpty7kky/image/upload/w_100,e_blur:500,q_1/v1753188913/Stephen_pezldi.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 100%;
+}
+.my-image.loaded {
+  background: url("https://res.cloudinary.com/dlpty7kky/image/upload/f_auto,,w_1000,h_1000,c_fit/v1753188913/Stephen_pezldi.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

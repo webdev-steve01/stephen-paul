@@ -4,9 +4,17 @@ import github from "../../assets/github.svg";
 import TypewriterComponent from "../motions/TypewriterComponent";
 import AboutNav from "../Navigation/AboutNav";
 import { useInView } from "react-intersection-observer";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 function ABoutFirst() {
+  const [loaded, setLoaded] = useState(false);
+
+  useEffect(() =>{
+    const img = new Image;
+    img.src =   "https://res.cloudinary.com/dlpty7kky/image/upload/f_auto,,w_1000,h_1000,c_fit/v1753188913/Stephen_pezldi.jpg"
+    img.onload = () => setLoaded(true)
+  }, [])
+
   const { ref, inView } = useInView({
     threshold: 0.3,
   });
@@ -34,9 +42,8 @@ function ABoutFirst() {
               seamlessly across all devices.
             </p>
             <section className="download-resume">
-              <button type="button" className="">
                 <a
-                  href="/my-resume.pdf"
+                  href="https://drive.google.com/uc?export=download&id=11MAkbY0a_fj-6gnqHr78tABBbDwwAGUM"
                   className="contact-me resume"
                   download={"resume.pdf"}
                 >
@@ -47,7 +54,6 @@ function ABoutFirst() {
                     <img src={arrow} alt="arrow" />
                   </div>
                 </a>
-              </button>
               <a href="https://www.linkedin.com/in/osesojeh-sylvester-paul-2bb872286/">
                 <div className="linkedin">
                   <img src={linkedin} alt="linkedin" />
@@ -63,7 +69,7 @@ function ABoutFirst() {
         </article>
       </section>
       <div className="about-image-skeleton">
-        <section className="about-image-container">
+        <section className={`my-image ${loaded ? "loaded": ""}`}>
           {/* <img loading="lazy" src={image} alt="" className="about-image" /> */}
         </section>
       </div>

@@ -6,18 +6,19 @@ function AboutSection() {
       <section className="about-title">
         <TypewriterComponent text="About Me" classname="about-title-head" />
       </section>
+
       <article className="about-article">
         <section className="about-text">
           <h2 className="about-text-head">
-            I am a front-end developer based in Nigeria. Has a Computer-Science
-            Background.{" "}
+            I'm a Front-End Developer with a background in Computer Science, based in Nigeria.
           </h2>
           <p className="about-text-p">
-            I am a front-end developer based in Nigeria looking for exciting
-            opportunities. Equipped with a Computer Science background. Likes to
-            focus on accessibility and functionality when developing.
+            I specialize in building accessible, responsive, and user-friendly web experiences.
+            With a solid foundation in Computer Science and 4+ years of hands-on experience, I enjoy turning complex problems into simple, elegant interfaces.
+            I'm currently open to exciting opportunities where I can contribute to impactful products and grow as a developer.
           </p>
         </section>
+
         <section>
           <a href="/more-about-me" className="more-about-link">
             More About Me
