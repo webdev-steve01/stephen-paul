@@ -37,6 +37,7 @@ function Project(prop: project) {
             src={loaded ? prop.image : prop.placeholder}
             alt={prop.alt}
             className={`${style.image} ${!loaded ? style.blur : style.loaded} `}
+            loading="lazy"
           />
         </figure>
 

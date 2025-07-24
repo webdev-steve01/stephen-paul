@@ -88,6 +88,7 @@ function FirstSection() {
               <img
                 src="https://res.cloudinary.com/dlpty7kky/image/upload/f_auto,w_1000,h_1000,c_fit/v1753188913/Stephen_pezldi.jpg"
                 alt="Stephen Sylvester-Paul profile picture"
+                loading="lazy"
               />
             )}
           </figure>
