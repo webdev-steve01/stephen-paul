@@ -1,54 +1,49 @@
-# React + TypeScript + Vite
+# 💼 Personal Portfolio – Stephen Paul
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Live Site: [https://stephen-paul.vercel.app/](https://stephen-paul.vercel.app/)
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 👋 About Me
 
-## Expanding the ESLint configuration
+I'm Stephen Paul, a Frontend Developer passionate about creating smooth, responsive, and performance-optimized web experiences. I enjoy turning complex problems into clean, accessible UI designs — with a focus on scalability and speed. This portfolio is both a playground and a showcase of my work, skills, and evolution as a developer.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## 📌 Project Overview
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+This is my personal portfolio website — a central hub to display my featured projects, professional experience, and skills in web development. It's fully responsive, performance-conscious, and designed to feel clean, interactive, and intuitive.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+---
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+## ✨ Features
+
+- Dynamic project section with tags (live, desktop-only, incomplete, etc.)
+- Smooth transitions and animations
+- Focus on accessibility and semantic HTML
+- Mobile-friendly layout
+- Fast load times and lazy-loaded assets
+- Professional tone + personal branding
+
+---
+
+## 🛠 Tech Stack
+
+- **Framework**: Next.js / React
+- **Styling**: CSS Modules / Tailwind CSS / SCSS
+- **Hosting**: Vercel / Netlify / Github Pages
+- **Assets**: SVGs, responsive images, and blur-up image loading
+- **Extras**: Firebase, TypeScript, Framer Motion, etc.
+
+---
+
+## 🧪 Getting Started Locally
+
+```bash
+git clone https://github.com/webdev-steve01/stephen-paul.git
+cd portfolio-site
+npm install
+npm run dev
+
+
 ```
