@@ -1,7 +1,4 @@
 import Project from "./Project/Project";
-import Hei from "../assets/portfolio/Hei.png";
-import netflix from "../assets/portfolio/netflix.png";
-import cbt from "../assets/portfolio/cbt.png";
 import TypewriterComponent from "./motions/TypewriterComponent";
 
 const HeiDesc: string =
@@ -33,7 +30,8 @@ function SecondSection() {
 
       <section className="project-holder">
         <Project
-          image={netflix}
+          image="https://res.cloudinary.com/dlpty7kky/image/upload/f_auto,w_1000,h_1000,c_fit/v1753386840/netflix_pynkpl.png"
+          placeholder="https://res.cloudinary.com/dlpty7kky/image/upload/w_100,e_blur:500,q_1/v1753386840/netflix_pynkpl.png"
           desc={NetflixDesc}
           year="2025"
           role="Fullstack Developer"
@@ -44,7 +42,8 @@ function SecondSection() {
           liveLink="https://netflix-clone-rho-gray.vercel.app/"
         />
         <Project
-          image={Hei}
+          image="https://res.cloudinary.com/dlpty7kky/image/upload/f_auto,w_1000,h_1000,c_fit/v1753386876/Hei_zwchyn.png"
+          placeholder="https://res.cloudinary.com/dlpty7kky/image/upload//w_100,e_blur:500,q_1/v1753386876/Hei_zwchyn.png"
           desc={HeiDesc}
           year="2025"
           role="Frontend Developer"
@@ -56,7 +55,8 @@ function SecondSection() {
           liveLink="http://www.heiservicebot.com.ng"
         />
         <Project
-          image={cbt}
+          image="https://res.cloudinary.com/dlpty7kky/image/upload/f_auto,w_1000,h_1000,c_fit/v1753386895/cbt_bmauge.png"
+          placeholder="https://res.cloudinary.com/dlpty7kky/image/upload/w_100,e_blur:500,q_1/v1753386895/cbt_bmauge.png"
           desc={cbtDesc}
           year="2025"
           role="Frontend Developer"

@@ -13,10 +13,13 @@
   background-color: #1a1a1a;
   border-radius: 20px;
   position: relative;
+  min-width: 600px;
+  overflow: hidden;
 }
 .border {
   border-radius: 20px;
   width: 100%;
+  /* max-width: 780px; */
 }
 .tags {
   position: absolute;
@@ -110,6 +113,24 @@
 
 .linkImage {
   width: 30px;
+}
+
+.image {
+  transition: filter 0.3s ease, transform 0.3s ease;
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.blur {
+  filter: blur(20px);
+  transform: scale(1.05);
+}
+
+.loaded {
+  filter: none;
+  transform: scale(1);
 }
 
 @media screen and (min-width: 580px) {

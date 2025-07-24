@@ -1,9 +1,11 @@
 import style from "./project.module.css";
 import arrow from "../../assets/arrow.svg";
 import github from "../../assets/bxl-github.svg.svg";
+import { useEffect, useState } from "react";
 
 type project = {
   image: string;
+  placeholder?: string;
   title: string;
   desc: string;
   year: string;
@@ -18,11 +20,24 @@ type project = {
 };
 
 function Project(prop: project) {
+  const [loaded, setLoaded] = useState(false);
+
+  useEffect(() => {
+    const img = new Image();
+    img.src = prop.image;
+    img.onload = () => {
+      setLoaded(true);
+    };
+  }, [prop.image]);
   return (
     <article className={style.container}>
       <section className={style.projectImageContainer}>
         <figure className={style.projectImage}>
-          <img src={prop.image} alt={prop.alt} className={style.image} />
+          <img
+            src={loaded ? prop.image : prop.placeholder}
+            alt={prop.alt}
+            className={`${style.image} ${!loaded ? style.blur : style.loaded} `}
+          />
         </figure>
 
         <div className={style.tags}>
@@ -56,16 +71,37 @@ function Project(prop: project) {
           </section>
         </section>
 
-        <nav className={style.linkSection} aria-label={`Links to ${prop.title}`}>
+        <nav
+          className={style.linkSection}
+          aria-label={`Links to ${prop.title}`}
+        >
           {prop.isLive && (
-            <a href={prop.liveLink} className={style.link} target="_blank" rel="noopener noreferrer">
+            <a
+              href={prop.liveLink}
+              className={style.link}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <p>LIVE</p>
-              <img className={style.linkImage} src={arrow} alt="Live project link" />
+              <img
+                className={style.linkImage}
+                src={arrow}
+                alt="Live project link"
+              />
             </a>
           )}
-          <a href={prop.githubRepo} className={style.link} target="_blank" rel="noopener noreferrer">
+          <a
+            href={prop.githubRepo}
+            className={style.link}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <p>GITHUB</p>
-            <img className={style.linkImage} src={github} alt="GitHub repository link" />
+            <img
+              className={style.linkImage}
+              src={github}
+              alt="GitHub repository link"
+            />
           </a>
         </nav>
       </section>
