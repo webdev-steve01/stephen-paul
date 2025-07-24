@@ -1,7 +1,6 @@
 /* css module for projects */
 
 .container {
-  /* border: 1px solid red; */
   display: flex;
   flex-direction: column;
   padding: 1em 0;
@@ -14,13 +13,13 @@
   border-radius: 20px;
   position: relative;
   width: 100%;
-
   overflow: hidden;
 }
 .border {
   border-radius: 20px;
   width: 100%;
   max-width: 780px;
+  min-width: 526px;
 }
 .tags {
   position: absolute;
@@ -68,8 +67,9 @@
   line-height: 30px;
   color: #c7c7c7;
   width: 100%;
-  max-width: 1000px;
-  font-size: 0.8em;
+  max-width: 1200px;
+  font-size: 0.75em;
+  /* border: 1px solid red; */
 }
 .moreInfo {
   padding: 1em 0;
@@ -142,7 +142,7 @@
 @media screen and (min-width: 700px) {
   .desc {
     width: 90%;
-    max-width: 650px;
+    max-width: 1000px;
     font-size: 1em;
     text-align: left;
   }
