@@ -34,7 +34,9 @@ function ConnectSection() {
     } catch (error: any) {
       console.error("Failed to send message:", error);
       setAlertMessage(
-        `Failed to send message: ${error.text || error.message || "Unknown error"}. Please try again later.`
+        `Failed to send message: ${
+          error.text || error.message || "Unknown error"
+        }. Please try again later.`
       );
       setIsSuccess(false);
     } finally {
@@ -59,15 +61,24 @@ function ConnectSection() {
         <article className="connect-article">
           <p className="connect-text">
             Feel free to contact me at{" "}
-            <a href="mailto:stephenpaul.code@gmail.com" className="connect-link">
+            <a
+              href="mailto:stephenpaul.code@gmail.com"
+              className="connect-link"
+            >
               stephenpaul.code@gmail.com
-            </a>.
+            </a>
+            .
           </p>
           <p className="connect-text">
             For more info, here is my{" "}
-            <a href="https://drive.google.com/uc?export=download&id=11MAkbY0a_fj-6gnqHr78tABBbDwwAGUM" download="resume.pdf" className="connect-link">
+            <a
+              href="https://drive.google.com/uc?export=download&id=1BLB8BLedWS6FkrA1ALApVu38jEepp3as"
+              download="resume.pdf"
+              className="connect-link"
+            >
               resume
-            </a>.
+            </a>
+            .
           </p>
 
           <nav className="connect-socials" aria-label="Social Media Links">
@@ -76,21 +87,33 @@ function ConnectSection() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <img src={linkedin} alt="Stephen's LinkedIn profile" className="socials-image" />
+              <img
+                src={linkedin}
+                alt="Stephen's LinkedIn profile"
+                className="socials-image"
+              />
             </a>
             <a
               href="https://github.com/webdev-steve01"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <img src={github} alt="Stephen's GitHub profile" className="socials-image" />
+              <img
+                src={github}
+                alt="Stephen's GitHub profile"
+                className="socials-image"
+              />
             </a>
             <a
               href="https://x.com/Osesojeh01?t=6vxUpJ4fqjir0yUeJWNmZA&s=09"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <img src={x} alt="Stephen on Twitter/X" className="socials-image" />
+              <img
+                src={x}
+                alt="Stephen on Twitter/X"
+                className="socials-image"
+              />
             </a>
           </nav>
         </article>

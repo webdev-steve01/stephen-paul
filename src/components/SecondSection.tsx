@@ -5,15 +5,19 @@ import cbt from "../assets/portfolio/cbt.png";
 import TypewriterComponent from "./motions/TypewriterComponent";
 
 const HeiDesc: string =
-  "At Hei, I developed and delivered a comprehensive support page to enhance the user experience for our WhatsApp chatbot. This crucial resource provides students with seamless access to information and assistance, ensuring their campus life is efficient and smooth by addressing common queries and service needs. This was a professional work";
+  "At Hei, a startup launching in September, I developed a robust support page for our WhatsApp chatbot, designed the end-to-end chat flow, and integrated a payment gateway. The platform empowers students with instant, self-service access to campus information and paid services, streamlining common requests and reducing the need for human support..";
 const NetflixDesc: string =
-  "Developed a Netflix-style movie platform that lets users explore and discover films in an interactive, responsive interface. Focused on delivering a smooth browsing experience with clean design, dynamic content loading, and intuitive navigation across devices. This was a perfect project to test my ability to optimize and reduce load time as I was dealing with large amounts of data";
+  "The goal was to master dynamic content loading and minimize load times while handling large datasets. I implemented server-side data fetching, caching strategies, and genre-based filtering to reduce browser strain. The interface is fully responsive, intuitive across devices, and delivers a fluid user experience. Note: Chrome might flag it for phishing due to the resemblance to Netflix — an unintended consequence.";
 const cbtDesc: string =
-  "Created a computer-based testing platform for desktops designed for efficient question delivery and smooth user interaction on desktops. Built with a focus on dynamic content rendering, and an intuitive interface to support seamless exam-taking.";
+  "Focused on performance and simplicity over responsiveness, the platform was intentionally built for desktops to support proctored environments. It features dynamic content rendering, clear navigation, and a no-distraction layout to ensure smooth exam-taking for candidates.";
 
 function SecondSection() {
   return (
-    <section className="Second" id="Projects" aria-labelledby="featured-projects">
+    <section
+      className="Second"
+      id="Projects"
+      aria-labelledby="featured-projects"
+    >
       <header className="second-article">
         <h2 id="featured-projects">
           <TypewriterComponent
