@@ -75,8 +75,8 @@ h3 {
   border-radius: 10px;
   display: flex;
   min-height: 400px;
-  max-height: 500px;
-  max-width: 400px;
+  max-height: 600px;
+  max-width: 550px;
   min-width: 300px;
   width: 100%;
   height: 100%;
@@ -120,6 +120,7 @@ h3 {
   align-items: center;
   width: 100%;
   margin: 0 auto;
+  /* max-width: 1400px; */
 }
 .my-image {
   background: url("https://res.cloudinary.com/dlpty7kky/image/upload/w_100,e_blur:500,q_1/v1753188913/Stephen_pezldi.jpg");
