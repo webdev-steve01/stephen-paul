@@ -19,7 +19,7 @@
   border-radius: 20px;
   width: 100%;
   /* max-width: 780px; */
-  min-width: 526px;
+ 
 }
 .tags {
   position: absolute;
@@ -145,6 +145,7 @@
     max-width: 1000px;
     font-size: 1em;
     text-align: left;
+     min-width: 526px;
   }
 }
 @media screen and (min-width: 1300px) {
