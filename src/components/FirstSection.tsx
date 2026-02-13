@@ -20,7 +20,7 @@ function FirstSection() {
   useEffect(() => {
     const img = new Image();
     img.src =
-      "https://res.cloudinary.com/dlpty7kky/image/upload/f_auto,w_1000,h_1000,c_fit/v1753188913/Stephen_pezldi.jpg";
+      "https://res.cloudinary.com/dlpty7kky/image/upload/f_auto,w_1000,h_1000,c_fit/v1770996714/everything_picture_n8hl0i.jpg";
     img.onload = () => setLoaded(true);
   }, []);
 
@@ -86,7 +86,7 @@ function FirstSection() {
           <figure className={`my-image ${loaded ? "loaded" : ""}`}>
             {loaded && (
               <img
-                src="https://res.cloudinary.com/dlpty7kky/image/upload/f_auto,w_1000,h_1000,c_fit/v1753188913/Stephen_pezldi.jpg"
+                src="https://res.cloudinary.com/dlpty7kky/image/upload/f_auto,w_1000,h_1000,c_fit/v1770996714/everything_picture_n8hl0i.jpg"
                 alt="Stephen Sylvester-Paul profile picture"
                 loading="lazy"
               />

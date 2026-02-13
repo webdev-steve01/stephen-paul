@@ -22,6 +22,10 @@ body {
   font-family: "Manrope", sans-serif;
   overflow-x: hidden;
 }
+.container {
+  max-width: 1300px;
+  margin: 0 auto;
+}
 img {
   width: 100%;
   height: 100%;
@@ -75,8 +79,8 @@ h3 {
   border-radius: 10px;
   display: flex;
   min-height: 400px;
-  max-height: 600px;
-  max-width: 550px;
+  max-height: 550px;
+  max-width: 450px;
   min-width: 300px;
   width: 100%;
   height: 100%;
@@ -123,6 +127,15 @@ h3 {
   /* max-width: 1400px; */
 }
 .my-image {
+  background: url("https://res.cloudinary.com/dlpty7kky/image/upload/w_100,e_blur:500,q_1/v1770996714/everything_picture_n8hl0i.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 100%;
+}
+.my-image-two {
   background: url("https://res.cloudinary.com/dlpty7kky/image/upload/w_100,e_blur:500,q_1/v1753188913/Stephen_pezldi.jpg");
   background-size: cover;
   background-position: center;
@@ -132,6 +145,15 @@ h3 {
   width: 100%;
 }
 .my-image.loaded {
+  background: url("https://res.cloudinary.com/dlpty7kky/image/upload/f_auto,,w_1000,h_1000,c_fit/v1770996714/everything_picture_n8hl0i.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 100%;
+}
+.my-image.loaded-two {
   background: url("https://res.cloudinary.com/dlpty7kky/image/upload/f_auto,,w_1000,h_1000,c_fit/v1753188913/Stephen_pezldi.jpg");
   background-size: cover;
   background-position: center;

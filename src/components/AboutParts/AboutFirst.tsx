@@ -9,11 +9,12 @@ import { useEffect, useState } from "react";
 function ABoutFirst() {
   const [loaded, setLoaded] = useState(false);
 
-  useEffect(() =>{
-    const img = new Image;
-    img.src =   "https://res.cloudinary.com/dlpty7kky/image/upload/f_auto,,w_1000,h_1000,c_fit/v1753188913/Stephen_pezldi.jpg"
-    img.onload = () => setLoaded(true)
-  }, [])
+  useEffect(() => {
+    const img = new Image();
+    img.src =
+      "https://res.cloudinary.com/dlpty7kky/image/upload/f_auto,,w_1000,h_1000,c_fit/v1753188913/Stephen_pezldi.jpg";
+    img.onload = () => setLoaded(true);
+  }, []);
 
   const { ref, inView } = useInView({
     threshold: 0.3,
@@ -42,18 +43,18 @@ function ABoutFirst() {
               seamlessly across all devices.
             </p>
             <section className="download-resume">
-                <a
-                  href="https://drive.google.com/uc?export=download&id=11MAkbY0a_fj-6gnqHr78tABBbDwwAGUM"
-                  className="contact-me resume"
-                  download={"resume.pdf"}
-                >
-                  <p>
-                    <span className="resume-d">Download</span> Resume
-                  </p>
-                  <div className="arrow">
-                    <img src={arrow} alt="arrow" />
-                  </div>
-                </a>
+              <a
+                href="https://drive.google.com/uc?export=download&id=11MAkbY0a_fj-6gnqHr78tABBbDwwAGUM"
+                className="contact-me resume"
+                download={"resume.pdf"}
+              >
+                <p>
+                  <span className="resume-d">Download</span> Resume
+                </p>
+                <div className="arrow">
+                  <img src={arrow} alt="arrow" />
+                </div>
+              </a>
               <a href="https://www.linkedin.com/in/osesojeh-sylvester-paul-2bb872286/">
                 <div className="linkedin">
                   <img src={linkedin} alt="linkedin" />
@@ -69,7 +70,7 @@ function ABoutFirst() {
         </article>
       </section>
       <div className="about-image-skeleton">
-        <section className={`my-image ${loaded ? "loaded": ""}`}>
+        <section className={`my-image  ${loaded ? "loaded-two" : ""}`}>
           {/* <img loading="lazy" src={image} alt="" className="about-image" /> */}
         </section>
       </div>

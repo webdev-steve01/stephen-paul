@@ -9,7 +9,7 @@ function Experience() {
               <p className="company">Virograf</p>
               <p className="job">Senior Frontend Developer</p>
             </div>
-            <p>Dec 2023 - Sept 2025 </p>
+            <p>Dec 2023 - June 2025 </p>
           </div>
           <ul className="work-description">
             <li className="work-description-item">
