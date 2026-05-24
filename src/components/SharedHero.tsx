@@ -1,6 +1,6 @@
-import arrow from "../assets/arrow.svg";
 import linkedin from "../assets/linkedin.svg";
 import github from "../assets/github.svg";
+import download from "../assets/bx-download.svg.svg";
 import TypewriterComponent from "./motions/TypewriterComponent";
 
 type SharedHeroProps = {
@@ -28,15 +28,15 @@ function SharedHero({
           <p className="about-text-p p-main">{description}</p>
           <section className="download-resume">
             <a
-              href="https://drive.google.com/uc?export=download&id=11MAkbY0a_fj-6gnqHr78tABBbDwwAGUM"
+              href="https://drive.google.com/uc?export=download&id=1YkN7KEAjAwGMxTo6Ylxyd4NDuy22Ok8k"
               className="contact-me resume"
               download={"resume.pdf"}
             >
               <p>
                 <span className="resume-d">Download</span> Resume
               </p>
-              <div className="arrow">
-                <img src={arrow} alt="arrow" />
+              <div className="black">
+                <img src={download} alt="arrow" />
               </div>
             </a>
             <a href="https://www.linkedin.com/in/osesojeh-sylvester-paul-2bb872286/">

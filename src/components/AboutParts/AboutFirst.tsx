@@ -1,9 +1,13 @@
 import AboutNav from "../Navigation/AboutNav";
 import { useEffect, useState } from "react";
 import SharedHero from "../SharedHero";
+import { useInView } from "react-intersection-observer";
 
 function ABoutFirst() {
   const [loaded, setLoaded] = useState(false);
+  const { ref, inView } = useInView({
+    threshold: 0.3,
+  });
 
   useEffect(() => {
     const img = new Image();
@@ -14,7 +18,8 @@ function ABoutFirst() {
 
   return (
     <div>
-      <AboutNav classname={`inView ? "" : "fixed"`} />
+      <AboutNav classname={`${inView ? "" : "fixed"}`} />
+      <div ref={ref}></div>
       <SharedHero
         descTitle="I am a front-end developer based in Nigeria with a
               Computer-Science background."
