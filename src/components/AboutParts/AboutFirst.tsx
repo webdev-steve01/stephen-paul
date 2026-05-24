@@ -1,5 +1,4 @@
 import AboutNav from "../Navigation/AboutNav";
-import { useInView } from "react-intersection-observer";
 import { useEffect, useState } from "react";
 import SharedHero from "../SharedHero";
 
@@ -12,13 +11,6 @@ function ABoutFirst() {
       "https://res.cloudinary.com/dlpty7kky/image/upload/f_auto,,w_1000,h_1000,c_fit/v1753188913/Stephen_pezldi.jpg";
     img.onload = () => setLoaded(true);
   }, []);
-
-  const { ref, inView } = useInView({
-    threshold: 0.3,
-  });
-  useEffect(() => {
-    console.log("inView:", inView);
-  }, [inView]);
 
   return (
     <div>

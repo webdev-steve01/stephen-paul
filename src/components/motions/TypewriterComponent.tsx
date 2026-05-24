@@ -27,7 +27,7 @@ function TypewriterComponent({ text, classname }: prop) {
     if (inView && !startTyping) {
       setStartTyping(true);
     }
-  }, [inView]);
+  }, [inView, startTyping]);
 
   // Update the visible text only after inView
   useEffect(() => {

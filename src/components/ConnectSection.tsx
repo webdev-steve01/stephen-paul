@@ -31,13 +31,25 @@ function ConnectSection() {
       setAlertMessage("Your message has been sent successfully!");
       setIsSuccess(true);
       form.current.reset();
-    } catch (error: any) {
+    } catch (error: unknown) {
       console.error("Failed to send message:", error);
+
+      let errorMessage = "Unknown error";
+
+      if (error instanceof Error) {
+        errorMessage = error.message;
+      } else if (
+        typeof error === "object" &&
+        error !== null &&
+        "text" in error
+      ) {
+        errorMessage = String(error.text);
+      }
+
       setAlertMessage(
-        `Failed to send message: ${
-          error.text || error.message || "Unknown error"
-        }. Please try again later.`
+        `Failed to send message: ${errorMessage}. Please try again later.`,
       );
+
       setIsSuccess(false);
     } finally {
       setIsSending(false);

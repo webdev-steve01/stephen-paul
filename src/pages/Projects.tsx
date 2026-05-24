@@ -1,6 +1,4 @@
-import React from "react";
 import Project from "../components/Project/Project";
-import NavBar from "../components/Navigation/NavBar";
 import { useInView } from "react-intersection-observer";
 import SharedHero from "../components/SharedHero";
 import ConnectSection from "../components/ConnectSection";
