@@ -14,10 +14,6 @@ function FirstSection() {
   });
 
   useEffect(() => {
-    console.log("inView:", inView);
-  }, [inView, ref]);
-
-  useEffect(() => {
     const img = new Image();
     img.src =
       "https://res.cloudinary.com/dlpty7kky/image/upload/f_auto,w_1000,h_1000,c_fit/v1770996714/everything_picture_n8hl0i.jpg";

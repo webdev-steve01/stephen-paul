@@ -435,6 +435,18 @@ label {
   flex-direction: column;
   gap: 2em;
 }
+
+/* ! May 2026 new additions */
+.flex-btw{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.pad-x-2{
+  padding: 0 .5em;
+}
+
+/* ! */
 @media screen and (max-width: 832px) {
   .NavList-desktop {
     display: none;

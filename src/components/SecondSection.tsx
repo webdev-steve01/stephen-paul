@@ -1,14 +1,12 @@
 import Project from "./Project/Project";
 import TypewriterComponent from "./motions/TypewriterComponent";
 
-const HeiDesc: string =
-  "At Hei, a startup launching in September, I developed a robust support page for our WhatsApp chatbot, designed the end-to-end chat flow, and integrated a payment gateway. The platform empowers students with instant, self-service access to campus information and paid services, streamlining common requests and reducing the need for human support..";
 const NetflixDesc: string =
   "The goal was to master dynamic content loading and minimize load times while handling large datasets. I implemented server-side data fetching, caching strategies, and genre-based filtering to reduce browser strain. The interface is fully responsive, intuitive across devices, and delivers a fluid user experience. Note: Chrome might flag it for phishing due to the resemblance to Netflix — an unintended consequence.";
-const cbtDesc: string =
-  "Focused on performance and simplicity over responsiveness, the platform was intentionally built for desktops to support proctored environments. It features dynamic content rendering, clear navigation, and a no-distraction layout to ensure smooth exam-taking for candidates.";
-const feTest: string =
-  "Built as a frontend assessment for a fintech company. Implemented responsive layouts with Tailwind CSS, animated marquee components, and clean component architecture following Next.js App Router patterns. The project showcased my ability to work from design specifications while maintaining code quality and best practices—leading to a successful job offer";
+const stackInvoiceDesc: string =
+  "Built a complete business management web app from the ground up using Next.js, Firebase, and TypeScript. The platform lets business owners and freelancers create and manage invoices with PDF generation, track inventory across folders, manage staff with role-based team permissions, and view sales analytics all in a clean mobile-first interface. Also hooked up a separate React landing page that proxies into the web app via Vercel rewrites.";
+const dubbyDesc: string =
+  "The goal was to create a welcoming and professional digital platform that reflects Dubby Educators’ mission of making quality education accessible, engaging, and student-focused. I designed a responsive landing page that highlights their homeschooling, private tutoring, and counseling services while maintaining a clean and trustworthy user experience. The interface emphasizes clarity, accessibility, and strong visual hierarchy to help parents and students easily explore educational solutions across devices. The result is a modern, conversion-focused platform that balances professionalism with an approachable learning experience";
 
 function SecondSection() {
   return (
@@ -18,12 +16,17 @@ function SecondSection() {
       aria-labelledby="featured-projects"
     >
       <header className="second-article">
-        <h2 id="featured-projects">
-          <TypewriterComponent
-            text="Featured Projects"
-            classname="second-header"
-          />
-        </h2>
+        <div className="flex-btw">
+          <h2 id="featured-projects" className="">
+            <TypewriterComponent
+              text="Featured Projects"
+              classname="second-header"
+            />
+          </h2>
+          <a className="pad-x-2 more-about-link" href="/projects">
+            View all projects
+          </a>
+        </div>
         <p className="second-text">
           Here are some of the selected projects that showcase my passion for
           front-end development.
@@ -44,42 +47,30 @@ function SecondSection() {
           liveLink="https://netflix-clone-rho-gray.vercel.app/"
         />
         <Project
-          image="https://res.cloudinary.com/dlpty7kky/image/upload/f_auto,w_1000,h_1000,c_fit/v1753386876/Hei_zwchyn.png"
-          placeholder="https://res.cloudinary.com/dlpty7kky/image/upload//w_100,e_blur:500,q_1/v1753386876/Hei_zwchyn.png"
-          desc={HeiDesc}
-          year="2025"
-          role="Frontend Developer"
+          image="https://res.cloudinary.com/dlpty7kky/image/upload/f_auto,w_1000,h_1000,c_fit/v1779563067/Screenshot_2026-05-23_200141_czoxfk.png"
+          placeholder="https://res.cloudinary.com/dlpty7kky/image/upload/w_100,e_blur:500,q_1/v1779563067/Screenshot_2026-05-23_200141_czoxfk.png"
+          desc={stackInvoiceDesc}
+          year="2026"
+          role="Frontend Engineer"
           isLive
-          title="Support Page for Hei WhatsApp Chatbot"
-          githubRepo="https://github.com/webdev-steve01/Hei-support-page.git"
-          alt="Support page for Hei WhatsApp chatbot screenshot"
-          isProfessional
-          liveLink="https://hei-support-page.vercel.app/"
+          isPrivate
+          title="Stack Invoice. A full-stack SaaS invoicing and inventory management platform"
+          githubRepo=""
+          alt="stack invoice web application"
+          liveLink="https://stack-invoice-web.vercel.app/"
         />
         <Project
-          image="https://res.cloudinary.com/dlpty7kky/image/upload/f_auto,w_1000,h_1000,c_fit/v1753386895/cbt_bmauge.png"
-          placeholder="https://res.cloudinary.com/dlpty7kky/image/upload/w_100,e_blur:500,q_1/v1753386895/cbt_bmauge.png"
-          desc={cbtDesc}
+          image="https://res.cloudinary.com/dlpty7kky/image/upload/f_auto,w_1000,h_1000,c_fit/v1779562772/dubby_eugjn6.png"
+          placeholder="https://res.cloudinary.com/dlpty7kky/image/upload/w_100,e_blur:500,q_1/v1779562772/dubby_eugjn6.png"
+          desc={dubbyDesc}
           year="2025"
           role="Frontend Developer"
           isLive
-          liveLink="https://cbt-project.vercel.app/"
-          isDesktop
-          title="A Fully Functional CBT Platform"
-          githubRepo="https://github.com/webdev-steve01/CBT-PROJECT.git"
-          alt="CBT platform screenshot"
-        />
-        <Project
-          image="https://res.cloudinary.com/dlpty7kky/image/upload/f_auto,w_1000,h_1000,c_fit/v1770998410/Screenshot_988_dtz87u.png"
-          placeholder="https://res.cloudinary.com/dlpty7kky/image/upload/w_100,e_blur:500,q_1/v1770998410/Screenshot_988_dtz87u.png"
-          desc={feTest}
-          year="2025"
-          role="Frontend Developer"
-          isLive
-          liveLink="https://osesojeh-stephen-sylvesterpaul-lendsqr-fe-test.vercel.app/"
-          title="Lendsqr Frontend Assessment Test"
-          githubRepo="https://github.com/webdev-steve01/CBT-PROJECT.git"
-          alt="CBT platform screenshot"
+          isPrivate
+          title="Dubby Educators. A Modern Learning Platform for Personalized Education"
+          githubRepo="https://github.com/webdev-steve01"
+          alt="Landing page for dubby"
+          liveLink="https://dubbyeducators.vercel.app/"
         />
       </section>
     </section>

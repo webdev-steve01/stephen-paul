@@ -16,10 +16,11 @@ type project = {
   isProfessional?: boolean;
   isDesktop?: boolean;
   unCompleted?: boolean;
+  isPrivate?: boolean;
   alt: string;
 };
 
-function Project(prop: project) {
+function Project({ isPrivate = false, ...prop }: project) {
   const [loaded, setLoaded] = useState(false);
 
   useEffect(() => {
@@ -50,6 +51,7 @@ function Project(prop: project) {
             <div className={style.incomplete}>incomplete</div>
           )}
           {prop.isDesktop && <div className={style.desktop}>Desktop Only</div>}
+          {isPrivate && <div className={style.desktop}>Private Repository</div>}
         </div>
       </section>
 
@@ -91,19 +93,22 @@ function Project(prop: project) {
               />
             </a>
           )}
-          <a
-            href={prop.githubRepo}
-            className={style.link}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <p>GITHUB</p>
-            <img
-              className={style.linkImage}
-              src={github}
-              alt="GitHub repository link"
-            />
-          </a>
+
+          {isPrivate === false && (
+            <a
+              href={prop.githubRepo}
+              className={style.link}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <p>GITHUB</p>
+              <img
+                className={style.linkImage}
+                src={github}
+                alt="GitHub repository link"
+              />
+            </a>
+          )}
         </nav>
       </section>
     </article>

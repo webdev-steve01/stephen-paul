@@ -5,6 +5,7 @@ import TypewriterComponent from "../motions/TypewriterComponent";
 import AboutNav from "../Navigation/AboutNav";
 import { useInView } from "react-intersection-observer";
 import { useEffect, useState } from "react";
+import SharedHero from "../SharedHero";
 
 function ABoutFirst() {
   const [loaded, setLoaded] = useState(false);
@@ -25,8 +26,8 @@ function ABoutFirst() {
 
   return (
     <div>
-      <AboutNav classname={inView ? "" : "fixed"} />
-      <section ref={ref} className="about-section about-main" id="About">
+      <AboutNav classname={`inView ? "" : "fixed"`} />
+      {/* <section ref={ref} className="about-section about-main" id="About">
         <section className="about-title about-title-main">
           <TypewriterComponent text="ABOUT ME" classname="about-title-head" />
         </section>
@@ -68,7 +69,16 @@ function ABoutFirst() {
             </section>
           </section>
         </article>
-      </section>
+      </section> */}
+      <SharedHero
+        descTitle="I am a front-end developer based in Nigeria with a
+              Computer-Science background."
+        description="  I'm a front-end developer based in Nigeria with a strong Computer
+              Science background. I’m passionate about building accessible,
+              high-performing interfaces that not only look great but work
+              seamlessly across all devices."
+        typeWriterText="ABOUT ME"
+      />
       <div className="about-image-skeleton">
         <section className={`my-image  ${loaded ? "loaded-two" : ""}`}>
           {/* <img loading="lazy" src={image} alt="" className="about-image" /> */}

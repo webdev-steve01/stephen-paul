@@ -1,12 +1,11 @@
 import { useState } from "react";
 import Hamburger from "../../assets/hamburger.svg";
 import cancel from "../../assets/cancel-close-delete-svgrepo-com.svg";
-
-type Props = {
+type props = {
   classname?: string;
 };
 
-function AboutNav({ classname }: Props) {
+function ProjectsNav({ classname }: props) {
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
   return (
@@ -14,23 +13,13 @@ function AboutNav({ classname }: Props) {
       <div className="my-name">{"<StephenPaul />"}</div>
       <ul className="NavList-desktop">
         <li className="NavItem">
-          <a href="./" className="NavLink">
+          <a href="/" className="NavLink">
             Home
           </a>
         </li>
         <li className="NavItem">
-          <a href="#Capabilities" className="NavLink">
-            Capabilities
-          </a>
-        </li>
-        <li className="NavItem">
-          <a href="/projects" className="NavLink">
-            Projects
-          </a>
-        </li>
-        <li className="NavItem">
-          <a href="#Experience" className="NavLink">
-            Experience
+          <a href="/more-about-me" className="NavLink">
+            About
           </a>
         </li>
         <li className="NavItem">
@@ -48,25 +37,15 @@ function AboutNav({ classname }: Props) {
         />
       </div>
       {isOpen ? (
-        <ul className="NavList-mobile">
+        <ul className="NavList-mobile" onClick={() => setIsOpen(false)}>
           <li className="NavItem">
-            <a href="./" className="NavLink">
+            <a href="/" className="NavLink">
               Home
             </a>
           </li>
           <li className="NavItem">
-            <a href="#Capabilities" className="NavLink">
-              Capabilities
-            </a>
-          </li>
-          <li className="NavItem">
-            <a href="/Projects" className="NavLink">
-              Projects
-            </a>
-          </li>
-          <li className="NavItem">
-            <a href="#About" className="NavLink">
-              Experience
+            <a href="/more-about-me" className="NavLink">
+              About
             </a>
           </li>
           <li className="NavItem">
@@ -82,4 +61,4 @@ function AboutNav({ classname }: Props) {
   );
 }
 
-export default AboutNav;
+export default ProjectsNav;

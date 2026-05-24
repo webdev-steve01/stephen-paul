@@ -10,7 +10,7 @@ function NavBar({ classname }: props) {
 
   return (
     <div className={`Navbar ${classname}`}>
-      <div className="my-name">{"<Stephen Paul />"}</div>
+      <div className="my-name">{"<StephenPaul />"}</div>
       <ul className="NavList-desktop">
         <li className="NavItem">
           <a href="#Home" className="NavLink">
