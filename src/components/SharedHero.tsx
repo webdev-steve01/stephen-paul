@@ -28,7 +28,7 @@ function SharedHero({
           <p className="about-text-p p-main">{description}</p>
           <section className="download-resume">
             <a
-              href="https://drive.google.com/uc?export=download&id=1YkN7KEAjAwGMxTo6Ylxyd4NDuy22Ok8k"
+              href="https://drive.google.com/file/d/1JoTbFhpn7LshSee3wlCS60EjjrJtdVaa/view?usp=drive_link"
               className="contact-me resume"
               download={"resume.pdf"}
             >
