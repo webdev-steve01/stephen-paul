@@ -2,6 +2,7 @@ import linkedin from "../assets/linkedin.svg";
 import github from "../assets/github.svg";
 import download from "../assets/bx-download.svg.svg";
 import TypewriterComponent from "./motions/TypewriterComponent";
+import { resume_download } from "../constants/resume";
 
 type SharedHeroProps = {
   typeWriterText: string;
@@ -28,7 +29,8 @@ function SharedHero({
           <p className="about-text-p p-main">{description}</p>
           <section className="download-resume">
             <a
-              href="https://drive.google.com/file/d/1JoTbFhpn7LshSee3wlCS60EjjrJtdVaa/view?usp=drive_link"
+              href={resume_download}
+              // https://drive.google.com/file/d/1jpaLb4EnBkmnG2dMg1sMyHS16zqrC93O/view?usp=sharing
               className="contact-me resume"
               download={"resume.pdf"}
             >

@@ -4,6 +4,7 @@ import emailjs from "@emailjs/browser";
 import linkedin from "../assets/bxl-linkedin.svg.svg";
 import github from "../assets/bxl-github.svg.svg";
 import x from "../assets/bxl-x.svg";
+import { resume_download } from "../constants/resume";
 
 const SERVICE_ID = import.meta.env.VITE_SERVICE_ID;
 const TEMPLATE_ID = import.meta.env.VITE_TEMPLATE_ID;
@@ -84,7 +85,8 @@ function ConnectSection() {
           <p className="connect-text">
             For more info, here is my{" "}
             <a
-              href="https://drive.google.com/uc?export=download&id=1BLB8BLedWS6FkrA1ALApVu38jEepp3as"
+              href={resume_download}
+              // https://drive.google.com/file/d//view?usp=sharing
               download="resume.pdf"
               className="connect-link"
             >
