@@ -4,11 +4,14 @@ import NotFoundPage from "./pages/NotFoundPage";
 import About from "./pages/About";
 import Test from "./pages/Test";
 import Projects from "./pages/Projects";
+import Cursor from "./components/motions/cursor";
+import CursorCircle from "./components/motions/cursor";
 
 function App() {
   return (
     <div className="relative min-h-screen">
       <div className="relative z-10">
+        <CursorCircle />
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="*" element={<NotFoundPage />} />

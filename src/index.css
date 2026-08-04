@@ -9,6 +9,7 @@
   -moz-user-select: none;
   -webkit-user-select: none;
   user-select: none;
+  cursor: none;
 }
 html {
   scroll-behavior: smooth;
@@ -232,7 +233,7 @@ h3 {
   gap: 1em;
 }
 .second-header {
-  font-size: 1.5em;
+  font-size: 1.3em;
   font-weight: 800;
 }
 .second-text {
@@ -331,6 +332,7 @@ label {
 .about-title-main .about-title-head,
 .capabilities-title {
   font-size: 2em;
+  font-weight: 800;
 }
 .about-text-head-main {
   display: flex;

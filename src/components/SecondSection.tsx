@@ -5,9 +5,8 @@ const NetflixDesc: string =
   "The goal was to master dynamic content loading and minimize load times while handling large datasets. I implemented server-side data fetching, caching strategies, and genre-based filtering to reduce browser strain. The interface is fully responsive, intuitive across devices, and delivers a fluid user experience. Note: Chrome might flag it for phishing due to the resemblance to Netflix — an unintended consequence.";
 const stackInvoiceDesc: string =
   "Built a complete business management web app from the ground up using Next.js, Firebase, and TypeScript. The platform lets business owners and freelancers create and manage invoices with PDF generation, track inventory across folders, manage staff with role-based team permissions, and view sales analytics all in a clean mobile-first interface. Also hooked up a separate React landing page that proxies into the web app via Vercel rewrites.";
-const dubbyDesc: string =
-  "The goal was to create a welcoming and professional digital platform that reflects Dubby Educators’ mission of making quality education accessible, engaging, and student-focused. I designed a responsive landing page that highlights their homeschooling, private tutoring, and counseling services while maintaining a clean and trustworthy user experience. The interface emphasizes clarity, accessibility, and strong visual hierarchy to help parents and students easily explore educational solutions across devices. The result is a modern, conversion-focused platform that balances professionalism with an approachable learning experience";
-
+const onwemaDesc: string =
+  "The goal was to design a modern and engaging landing page that captures the convenience and accessibility of Onwe Mma’s beauty marketplace platform. I created a responsive user experience that clearly showcases the platform’s ability to connect clients with trusted beauty professionals, including braiders, nail technicians, makeup artists, barbers, and skincare experts. The interface focuses on clean layouts, smooth navigation, and strong visual storytelling to build trust while encouraging bookings and business growth. The final result is a polished, mobile-friendly platform that reflects the brand’s mission of making beauty services more accessible and business management easier for professionals.";
 function SecondSection() {
   return (
     <section
@@ -24,12 +23,13 @@ function SecondSection() {
             />
           </h2>
           <a className="pad-x-2 more-about-link" href="/projects">
-            View all projects
+            All projects
           </a>
         </div>
         <p className="second-text">
           Here are some of the selected projects that showcase my passion for
           front-end development.
+          <br /> Click on "All projects" to see more
         </p>
       </header>
 
@@ -60,17 +60,17 @@ function SecondSection() {
           liveLink="https://stack-invoice-web.vercel.app/"
         />
         <Project
-          image="https://res.cloudinary.com/dlpty7kky/image/upload/f_auto,w_1000,h_1000,c_fit/v1779562772/dubby_eugjn6.png"
-          placeholder="https://res.cloudinary.com/dlpty7kky/image/upload/w_100,e_blur:500,q_1/v1779562772/dubby_eugjn6.png"
-          desc={dubbyDesc}
+          image="https://res.cloudinary.com/dlpty7kky/image/upload/f_auto,w_1000,h_1000,c_fit/v1779563053/Screenshot_2026-05-23_200224_pyfri7.png"
+          placeholder="https://res.cloudinary.com/dlpty7kky/image/upload/w_100,e_blur:500,q_1/v1779563053/Screenshot_2026-05-23_200224_pyfri7.png"
+          desc={onwemaDesc}
           year="2025"
           role="Frontend Developer"
           isLive
           isPrivate
-          title="Dubby Educators. A Modern Learning Platform for Personalized Education"
-          githubRepo="https://github.com/webdev-steve01"
+          title="Onwe Mma. A Beauty Marketplace Landing Page"
+          githubRepo=""
           alt="Landing page for dubby"
-          liveLink="https://dubbyeducators.vercel.app/"
+          liveLink="https://onwemma-web.vercel.app/"
         />
       </section>
     </section>
