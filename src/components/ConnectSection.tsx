@@ -188,7 +188,11 @@ function ConnectSection() {
           ></textarea>
         </div>
 
-        <button type="submit" className="Submit" disabled={isSending}>
+        <button
+          type="submit"
+          className="Submit text-black button"
+          disabled={isSending}
+        >
           {isSending ? "Sending..." : "Submit"}
         </button>
 

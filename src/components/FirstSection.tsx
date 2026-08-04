@@ -1,11 +1,13 @@
 import NavBar from "./Navigation/NavBar";
-import arrow from "../assets/contact-me.svg";
+import arrow from "../assets/download-svgrepo-com.svg";
 import linkedin from "../assets/linkedin.svg";
 import github from "../assets/github.svg";
-// import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import TypewriterComponent from "./motions/TypewriterComponent";
 import { useEffect, useState } from "react";
+import Tilt from "react-parallax-tilt";
+import { resume_download } from "../constants/resume";
+import LiquidEther from "./LiquidEther";
 
 function FirstSection() {
   const [loaded, setLoaded] = useState(false);
@@ -21,10 +23,40 @@ function FirstSection() {
   }, []);
 
   return (
-    <header>
-      <>
-        <NavBar classname={inView ? "" : "fixed"} />
-      </>
+    <header style={{ position: "relative", overflow: "hidden" }}>
+      <NavBar classname={inView ? "" : "fixed"} />
+
+      <div
+        style={{
+          width: "100%",
+          // height: "600px",
+          position: "absolute",
+          inset: 0,
+          zIndex: 0,
+          pointerEvents: "none", // let clicks pass through to content below
+        }}
+      >
+        <LiquidEther
+          colors={["#D3E97A", "#B8D85A", "#F0FFD0"]}
+          mouseForce={20}
+          cursorSize={100}
+          isViscous
+          viscous={30}
+          iterationsViscous={32}
+          iterationsPoisson={32}
+          resolution={0.5}
+          isBounce={false}
+          autoDemo
+          autoSpeed={0.5}
+          autoIntensity={2.2}
+          takeoverDuration={0.25}
+          autoResumeDelay={3000}
+          autoRampDuration={0.6}
+          // color0="#D3E97A"
+          // color1="#B8D85A"
+          // color2="#F0FFD0"
+        />
+      </div>
       <section className="First" id="Home">
         <section className="first-top">
           <section className="First-section">
@@ -43,11 +75,12 @@ function FirstSection() {
           <section className="intro-contact" aria-label="Contact links">
             <button type="button">
               <a
-                href="https://wa.me/2348163122231?text=Hello%20Stephen,%20I%20would%20like%20to%20discuss%20a%20project%20with%20you.%20Please%20let%20me%20know%20when%20you%20are%20available.%20Thank%20you"
+                // href="https://wa.me/2348163122231?text=Hello%20Stephen,%20I%20would%20like%20to%20discuss%20a%20project%20with%20you.%20Please%20let%20me%20know%20when%20you%20are%20available.%20Thank%20you"
+                href={resume_download}
                 className="contact-me"
                 aria-label="Chat with me on WhatsApp"
               >
-                <p>Contact Me</p>
+                <p>Download CV</p>
                 <div className="arrow">
                   <img src={arrow} alt="arrow icon" />
                 </div>
@@ -78,17 +111,27 @@ function FirstSection() {
           </section>
         </section>
 
-        <section className="image-skeleton">
-          <figure className={`my-image ${loaded ? "loaded" : ""}`}>
-            {loaded && (
-              <img
-                src="https://res.cloudinary.com/dlpty7kky/image/upload/f_auto,w_1000,h_1000,c_fit/v1770996714/everything_picture_n8hl0i.jpg"
-                alt="Stephen Sylvester-Paul profile picture"
-                loading="lazy"
-              />
-            )}
-          </figure>
-        </section>
+        <Tilt
+          tiltMaxAngleX={10}
+          tiltMaxAngleY={10}
+          perspective={1000}
+          transitionSpeed={1000}
+          scale={1.03}
+          tiltReverse={true}
+          className="image-skeleton"
+        >
+          <section className="image-skeleton">
+            <figure className={`my-image ${loaded ? "loaded" : ""}`}>
+              {loaded && (
+                <img
+                  src="https://res.cloudinary.com/dlpty7kky/image/upload/f_auto,w_1000,h_1000,c_fit/v1770996714/everything_picture_n8hl0i.jpg"
+                  alt="Stephen Sylvester-Paul profile picture"
+                  loading="lazy"
+                />
+              )}
+            </figure>
+          </section>
+        </Tilt>
       </section>
     </header>
   );

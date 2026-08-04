@@ -1,3 +1,5 @@
+@import "tailwindcss";
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -30,7 +32,7 @@ img {
   width: 100%;
   height: 100%;
 }
-button {
+.button {
   border-radius: 50px;
   padding: 0;
   background-color: #d3e97a;
@@ -406,7 +408,7 @@ label {
   padding: 3em 0;
 }
 .capabilities-list--child {
-  border: 1px solid gray;
+  /* border: 1px solid gray; */
   display: inline-block;
   border-radius: 23px;
   padding: 0.5em;

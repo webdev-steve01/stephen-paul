@@ -1,4 +1,18 @@
+import SHinyButton from "../motions/SHinyButton";
+
 function Capabilities() {
+  const capabilities = [
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "React",
+    "Next.js",
+    "Mobile First design",
+    "Tailwind",
+    "TypeScript",
+    "Node.js",
+    "MongoDB",
+  ];
   return (
     <div id="Capabilities" className="capabilities-section">
       <h1 className="capabilities-title">MY CAPABILITIES</h1>
@@ -12,16 +26,9 @@ function Capabilities() {
           collaborative mindset to every project.
         </p>
         <div className="capabilities-list">
-          <div className="capabilities-list--child">HTML</div>
-          <div className="capabilities-list--child">CSS</div>
-          <div className="capabilities-list--child">JavaScript</div>
-          <div className="capabilities-list--child">React</div>
-          <div className="capabilities-list--child">Next.js</div>
-          <div className="capabilities-list--child">Mobile First design</div>
-          <div className="capabilities-list--child">Tailwind</div>
-          <div className="capabilities-list--child">Typescript</div>
-          <div className="capabilities-list--child">Nodejs</div>
-          <div className="capabilities-list--child">Mongodb</div>
+          {capabilities.map((capability) => (
+            <SHinyButton text={capability} />
+          ))}
         </div>
       </div>
     </div>
