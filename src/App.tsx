@@ -4,7 +4,6 @@ import NotFoundPage from "./pages/NotFoundPage";
 import About from "./pages/About";
 import Test from "./pages/Test";
 import Projects from "./pages/Projects";
-import Cursor from "./components/motions/cursor";
 import CursorCircle from "./components/motions/cursor";
 
 function App() {

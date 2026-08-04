@@ -4,10 +4,10 @@ import linkedin from "../assets/linkedin.svg";
 import github from "../assets/github.svg";
 import { useInView } from "react-intersection-observer";
 import TypewriterComponent from "./motions/TypewriterComponent";
-import { useEffect, useState } from "react";
+import { useEffect, useState, lazy, Suspense } from "react";
 import Tilt from "react-parallax-tilt";
 import { resume_download } from "../constants/resume";
-import LiquidEther from "./LiquidEther";
+const LiquidEther = lazy(() => import("./LiquidEther"));
 
 function FirstSection() {
   const [loaded, setLoaded] = useState(false);
@@ -36,26 +36,25 @@ function FirstSection() {
           pointerEvents: "none", // let clicks pass through to content below
         }}
       >
-        <LiquidEther
-          colors={["#D3E97A", "#B8D85A", "#F0FFD0"]}
-          mouseForce={20}
-          cursorSize={100}
-          isViscous
-          viscous={30}
-          iterationsViscous={32}
-          iterationsPoisson={32}
-          resolution={0.5}
-          isBounce={false}
-          autoDemo
-          autoSpeed={0.5}
-          autoIntensity={2.2}
-          takeoverDuration={0.25}
-          autoResumeDelay={3000}
-          autoRampDuration={0.6}
-          // color0="#D3E97A"
-          // color1="#B8D85A"
-          // color2="#F0FFD0"
-        />
+        <Suspense fallback={null}>
+          <LiquidEther
+            colors={["#D3E97A", "#B8D85A", "#F0FFD0"]}
+            mouseForce={20}
+            cursorSize={100}
+            isViscous
+            viscous={30}
+            iterationsViscous={32}
+            iterationsPoisson={32}
+            resolution={0.5}
+            isBounce={false}
+            autoDemo
+            autoSpeed={0.5}
+            autoIntensity={2.2}
+            takeoverDuration={0.25}
+            autoResumeDelay={3000}
+            autoRampDuration={0.6}
+          />
+        </Suspense>
       </div>
       <section className="First" id="Home">
         <section className="first-top">
