@@ -68,7 +68,7 @@ function SecondSection() {
             />
           </h2>
           <a className="pad-x-2 more-about-link" href="/projects">
-            All projects
+            All Projects
           </a>
         </div>
         <p className="second-text">
