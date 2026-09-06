@@ -2,8 +2,7 @@ import Project from "./Project/Project";
 import ScrollSpyProjects from "./Project/scrollSpyProjects";
 import TypewriterComponent from "./motions/TypewriterComponent";
 import type { ProjectData } from "./Project/Project";
-// import type { ProjectData } from "./Project/Project";
-import style from "./secondSection.module.css";
+import style from "./SecondSection.module.css";
 
 export const projects: ProjectData[] = [
   {
