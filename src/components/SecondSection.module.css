@@ -1,0 +1,11 @@
+.mobileOnly {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+@media (min-width: 901px) {
+  .mobileOnly {
+    display: none;
+  }
+}

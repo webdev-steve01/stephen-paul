@@ -20,7 +20,7 @@ a {
 body {
   background-color: #0a0a0a;
   color: white;
-  padding: 0 1em;
+  /* padding:/ ; */
   width: 100vw;
   font-family: "Manrope", sans-serif;
   overflow-x: hidden;
@@ -69,9 +69,21 @@ h3 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1em 0;
-  position: relative;
-  transition: all 0.5s ease-in-out;
+  padding: 1em;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: transparent;
+  box-shadow: none;
+  background-color: #0a0a0a;
+  transition: background-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+.Navbar.fixed {
+  background-color: #0a0a0a;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 }
 .image-ham {
   display: none;
@@ -120,14 +132,13 @@ h3 {
   display: flex;
   gap: 1em;
   justify-content: space-between;
-  padding: 1em;
   border-bottom: 1px solid gray;
-  padding-bottom: 3em;
   min-height: 85vh;
   align-items: center;
   width: 100%;
   margin: 0 auto;
-  /* max-width: 1400px; */
+  padding: 0 1em;
+  padding-top: 6em; /* reserves the space .Navbar used to occupy in flow */
 }
 .my-image {
   background: url("https://res.cloudinary.com/dlpty7kky/image/upload/w_100,e_blur:500,q_1/v1770996714/everything_picture_n8hl0i.jpg");
@@ -197,9 +208,12 @@ h3 {
   padding: 10px;
   border-radius: 50%;
   background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .connect {
-  padding: 1em 0;
+  padding: 1em;
 }
 .connect-body {
   display: flex;
@@ -224,7 +238,7 @@ h3 {
   color: #c7c7c7;
 }
 .Second {
-  padding: 1.5em 0;
+  padding: 1.5em 1em;
   border-bottom: 1px solid #c7c7c7;
 }
 .second-article {
@@ -250,7 +264,8 @@ h3 {
 }
 .about-section,
 .capabilities-section {
-  padding: 1em 0;
+  padding: 1em;
+  padding-top: 6em;
 }
 .about-title {
   display: none;
@@ -269,12 +284,29 @@ h3 {
 .about-text-head {
   display: none;
 }
-.more-about-link,
-.more-about-link:hover,
-.more-about-link:visited,
-.more-about-link:link {
+.more-about-link {
   color: #d3e97a;
-  text-decoration: underline;
+  text-decoration: none;
+  position: relative;
+}
+
+/* Animated underline */
+.more-about-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 100%;
+  height: 1px;
+  background-color: #d3e97a;
+
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.more-about-link:hover::after {
+  transform: scaleX(1);
 }
 .connect-socials {
   display: flex;
@@ -320,6 +352,10 @@ label {
   padding: 0.7em;
   min-width: 200px;
   font-size: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5em;
 }
 .connect-article {
   display: flex;
@@ -404,10 +440,10 @@ label {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5em;
-  max-width: 400px;
+  max-width: 700px;
 }
 .capabilities-section {
-  padding: 3em 0;
+  padding: 3em 1em;
 }
 .capabilities-list--child {
   /* border: 1px solid gray; */
@@ -632,7 +668,8 @@ label {
 @media screen and (min-width: 900px) {
   .about-section {
     display: flex;
-    padding: 3em 0;
+    padding: 3em 1em;
+    padding-top: 6em;
     justify-content: space-between;
   }
   .about-text-head,
@@ -653,7 +690,11 @@ label {
   .about-title {
     width: 100%;
     display: flex;
+    flex-direction: column;
     justify-content: flex-start;
+  }
+  .sub-text{
+    font-size: 12px;
   }
   .about-title-head {
     font-size: 2em;
@@ -663,7 +704,7 @@ label {
     align-items: flex-start;
     width: 100%;
     justify-content: space-between;
-    padding: 2em 0;
+    padding: 2em 1em;
   }
   .connect .connect-form {
     width: 100%;
@@ -689,7 +730,7 @@ label {
     font-size: 2.5em;
   }
 }
-.fixed {
+/* .fixed {
   position: fixed;
   padding: 0.5em 1em;
   top: 0;
@@ -699,9 +740,21 @@ label {
   z-index: 1000;
   transform: translateY(-100%);
   animation: slideDown 0.5s ease forwards;
-}
+} */
 @keyframes slideDown {
   to {
     transform: translateY(0);
   }
+}
+
+.scroll-stack-card {
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+
+  transform-origin: top center;
+  will-change: transform, filter;
+
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
 }

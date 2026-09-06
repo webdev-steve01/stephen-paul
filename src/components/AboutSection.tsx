@@ -5,6 +5,7 @@ function AboutSection() {
     <section className="about-section" id="About">
       <section className="about-title">
         <TypewriterComponent text="About Me" classname="about-title-head" />
+        <p className="connect-text">click "more about me" to navigate to about page</p>
       </section>
 
       <article className="about-article">

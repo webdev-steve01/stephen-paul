@@ -1,16 +1,21 @@
 import NavBar from "./Navigation/NavBar";
-import arrow from "../assets/download-svgrepo-com.svg";
 import linkedin from "../assets/linkedin.svg";
 import github from "../assets/github.svg";
 import { useInView } from "react-intersection-observer";
 import TypewriterComponent from "./motions/TypewriterComponent";
-import { useEffect, useState, lazy, Suspense } from "react";
+import { useEffect, useState, lazy, Suspense, useRef } from "react";
 import Tilt from "react-parallax-tilt";
 import { resume_download } from "../constants/resume";
+import {
+  DownloadIcon,
+  type DownloadIconHandle,
+} from "@animateicons/react/lucide";
+
 const LiquidEther = lazy(() => import("./LiquidEther"));
 
 function FirstSection() {
   const [loaded, setLoaded] = useState(false);
+  const downloadRef = useRef<DownloadIconHandle>(null);
   const { ref, inView } = useInView({
     threshold: 0.3,
   });
@@ -61,18 +66,22 @@ function FirstSection() {
           <section className="First-section">
             <h1>
               <TypewriterComponent
-                text="HI, I AM STEPHEN SYLVESTER-PAUL"
+                text="HI, I AM OSESOJEH SYLVESTER-PAUL"
                 classname="header"
               />
             </h1>
             <p className="about-intro" ref={ref}>
-              A Nigeria-based front-end engineer with 4+ years of experience
-              passionate about building accessible and user-friendly websites.
+              A Frontend engineer with over 4 years of experience passionate
+              about building accessible and user-friendly websites.
             </p>
           </section>
 
           <section className="intro-contact" aria-label="Contact links">
-            <button type="button">
+            <button
+              type="button"
+              onMouseEnter={() => downloadRef.current?.startAnimation()}
+              onMouseLeave={() => downloadRef.current?.stopAnimation()}
+            >
               <a
                 // href="https://wa.me/2348163122231?text=Hello%20Stephen,%20I%20would%20like%20to%20discuss%20a%20project%20with%20you.%20Please%20let%20me%20know%20when%20you%20are%20available.%20Thank%20you"
                 href={resume_download}
@@ -81,7 +90,7 @@ function FirstSection() {
               >
                 <p>Download CV</p>
                 <div className="arrow">
-                  <img src={arrow} alt="arrow icon" />
+                  <DownloadIcon ref={downloadRef} color="white" size={24} />
                 </div>
               </a>
             </button>

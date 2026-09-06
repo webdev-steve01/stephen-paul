@@ -1,9 +1,13 @@
 import style from "./project.module.css";
 import arrow from "../../assets/arrow.svg";
 import github from "../../assets/bxl-github.svg.svg";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
+import {
+  ArrowUpRightIcon,
+  type ArrowUpRightIconHandle,
+} from "@animateicons/react/lucide";
 
-type project = {
+export type ProjectData = {
   image: string;
   placeholder?: string;
   title: string;
@@ -20,8 +24,9 @@ type project = {
   alt: string;
 };
 
-function Project({ isPrivate = false, ...prop }: project) {
+function Project({ isPrivate = false, ...prop }: ProjectData) {
   const [loaded, setLoaded] = useState(false);
+  const arrowRef = useRef<ArrowUpRightIconHandle>(null);
 
   useEffect(() => {
     const img = new Image();
@@ -84,13 +89,11 @@ function Project({ isPrivate = false, ...prop }: project) {
               className={style.link}
               target="_blank"
               rel="noopener noreferrer"
+              onMouseEnter={() => arrowRef.current?.startAnimation()}
+              onMouseLeave={() => arrowRef.current?.stopAnimation()}
             >
               <p>LIVE</p>
-              <img
-                className={style.linkImage}
-                src={arrow}
-                alt="Live project link"
-              />
+              <ArrowUpRightIcon ref={arrowRef} size={24} color="#D3E97A" />
             </a>
           )}
 

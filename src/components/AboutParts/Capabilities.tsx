@@ -2,16 +2,18 @@ import SHinyButton from "../motions/SHinyButton";
 
 function Capabilities() {
   const capabilities = [
-    "HTML",
-    "CSS",
-    "JavaScript",
     "React",
     "Next.js",
-    "Mobile First design",
-    "Tailwind",
     "TypeScript",
+    "Tailwind CSS",
+    "TanStack Query",
+    "JavaScript",
+    "HTML",
+    "CSS",
+    "Responsive Design",
     "Node.js",
-    "MongoDB",
+    "Go",
+    "PostgreSQL",
   ];
   return (
     <div id="Capabilities" className="capabilities-section">

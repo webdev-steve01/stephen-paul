@@ -1,0 +1,142 @@
+.grid {
+  display: none;
+}
+
+@media (min-width: 901px) {
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+  }
+}
+
+.stickyPanel {
+  position: sticky;
+  top: 6rem;
+  height: 70vh;
+  border-radius: 1rem;
+  overflow: hidden;
+  background: radial-gradient(circle at center, #1a1a1a, #0a0a0a);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.stickyImage {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transform: scale(1.04);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  pointer-events: none;
+}
+
+.stickyImageActive {
+  position: relative;
+  opacity: 1;
+  transform: scale(1);
+  pointer-events: auto;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: filter 0.4s ease;
+}
+
+.blur {
+  filter: blur(20px);
+}
+
+.loaded {
+  filter: blur(0);
+}
+
+.tags {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  display: flex;
+  gap: 0.5rem;
+  z-index: 2;
+}
+
+.online,
+.professional,
+.incomplete,
+.desktopTag {
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px);
+}
+
+.textPanels {
+  display: flex;
+  flex-direction: column;
+  gap: 3em;
+}
+
+.textPanel {
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  opacity: 0.35;
+  transition: opacity 0.4s ease;
+}
+
+.textPanelActive {
+  opacity: 1;
+}
+
+.projectTitle {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+}
+
+.desc {
+  opacity: 0.8;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  max-width: 40ch;
+}
+
+.moreInfo {
+  margin-bottom: 2rem;
+}
+
+.projectInfo {
+  margin-bottom: 0.75rem;
+}
+
+.projectInfoDetails {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.detail {
+  opacity: 0.7;
+}
+
+.linkSection {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: inherit;
+}
+
+.linkImage {
+  width: 20px;
+  height: 20px;
+}

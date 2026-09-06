@@ -5,6 +5,7 @@ import linkedin from "../assets/bxl-linkedin.svg.svg";
 import github from "../assets/bxl-github.svg.svg";
 import x from "../assets/bxl-x.svg";
 import { resume_download } from "../constants/resume";
+import { SendIcon, type SendIconHandle } from "@animateicons/react/lucide";
 
 const SERVICE_ID = import.meta.env.VITE_SERVICE_ID;
 const TEMPLATE_ID = import.meta.env.VITE_TEMPLATE_ID;
@@ -14,6 +15,7 @@ function ConnectSection() {
   const [isSending, setIsSending] = useState(false);
   const [alertMessage, setAlertMessage] = useState<string | null>(null);
   const [isSuccess, setIsSuccess] = useState<boolean | null>(null);
+  const submitRef = useRef<SendIconHandle>(null);
 
   const form = useRef<HTMLFormElement>(null);
 
@@ -192,8 +194,11 @@ function ConnectSection() {
           type="submit"
           className="Submit text-black button"
           disabled={isSending}
+          onMouseEnter={() => submitRef.current?.startAnimation()}
+          onMouseLeave={() => submitRef.current?.stopAnimation()}
         >
-          {isSending ? "Sending..." : "Submit"}
+          <p>{isSending ? "Sending..." : "Submit"}</p>
+          <SendIcon ref={submitRef} size={24} />
         </button>
 
         {alertMessage && (

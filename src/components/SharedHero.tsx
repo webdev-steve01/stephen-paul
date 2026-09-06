@@ -1,8 +1,12 @@
 import linkedin from "../assets/linkedin.svg";
 import github from "../assets/github.svg";
-import download from "../assets/bx-download.svg.svg";
 import TypewriterComponent from "./motions/TypewriterComponent";
 import { resume_download } from "../constants/resume";
+import {
+  DownloadIcon,
+  type DownloadIconHandle,
+} from "@animateicons/react/lucide";
+import { useRef } from "react";
 
 type SharedHeroProps = {
   typeWriterText: string;
@@ -15,6 +19,7 @@ function SharedHero({
   descTitle,
   description,
 }: SharedHeroProps) {
+  const downloadRef = useRef<DownloadIconHandle>(null);
   return (
     <section className="about-section about-main" id="About">
       <section className="about-title about-title-main">
@@ -33,12 +38,14 @@ function SharedHero({
               // https://drive.google.com/file/d/1jpaLb4EnBkmnG2dMg1sMyHS16zqrC93O/view?usp=sharing
               className="contact-me resume"
               download={"resume.pdf"}
+              onMouseEnter={() => downloadRef.current?.startAnimation()}
+              onMouseLeave={() => downloadRef.current?.stopAnimation()}
             >
               <p>
                 <span className="resume-d">Download</span> Resume
               </p>
               <div className="black">
-                <img src={download} alt="arrow" />
+                <DownloadIcon ref={downloadRef} color="white" size={24} />
               </div>
             </a>
             <a href="https://www.linkedin.com/in/osesojeh-sylvester-paul-2bb872286/">
