@@ -1,5 +1,4 @@
 import style from "./project.module.css";
-import arrow from "../../assets/arrow.svg";
 import github from "../../assets/bxl-github.svg.svg";
 import { useEffect, useState, useRef } from "react";
 import {
