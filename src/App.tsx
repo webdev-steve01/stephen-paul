@@ -4,7 +4,6 @@ import NotFoundPage from "./pages/NotFoundPage";
 import About from "./pages/About";
 import Test from "./pages/Test";
 import Projects from "./pages/Projects";
-import CursorCircle from "./components/motions/cursor";
 import Lenis from "lenis";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -27,7 +26,7 @@ function App() {
   return (
     <div className="relative min-h-screen">
       <div className="relative z-10">
-        <CursorCircle />
+        {/* <CursorCircle /> */}
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="*" element={<NotFoundPage />} />

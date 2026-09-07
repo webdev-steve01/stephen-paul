@@ -29,9 +29,10 @@ function FirstSection() {
 
   return (
     <header style={{ position: "relative", overflow: "hidden" }}>
-      <NavBar classname={inView ? "" : "fixed"} />
+      <NavBar scrolled={!inView} />
 
       <div
+        className="liquid-ether-wrapper"
         style={{
           width: "100%",
           // height: "600px",
@@ -57,10 +58,12 @@ function FirstSection() {
             autoIntensity={2.2}
             takeoverDuration={0.25}
             autoResumeDelay={3000}
+            // className=""
             autoRampDuration={0.6}
           />
         </Suspense>
       </div>
+      <div ref={ref} style={{ height: "1px" }} />
       <section className="First" id="Home">
         <section className="first-top">
           <section className="First-section">
@@ -70,7 +73,7 @@ function FirstSection() {
                 classname="header"
               />
             </h1>
-            <p className="about-intro" ref={ref}>
+            <p className="about-intro">
               A Frontend engineer with over 4 years of experience passionate
               about building accessible and user-friendly websites.
             </p>

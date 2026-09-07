@@ -154,7 +154,7 @@ function Projects() {
   return (
     <div>
       <>
-        <ProjectsNav classname={inView ? "" : "fixed"} />
+        <ProjectsNav scrolled={!inView} />
         <div ref={ref}></div>
       </>
       <SharedHero

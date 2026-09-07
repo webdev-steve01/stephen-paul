@@ -6,7 +6,7 @@ import { useInView } from "react-intersection-observer";
 function ABoutFirst() {
   const [loaded, setLoaded] = useState(false);
   const { ref, inView } = useInView({
-    threshold: 0.3,
+    threshold: 0,
   });
 
   useEffect(() => {
@@ -18,8 +18,8 @@ function ABoutFirst() {
 
   return (
     <div>
-      <AboutNav classname={`${inView ? "" : "fixed"}`} />
-      <div ref={ref}></div>
+      <AboutNav scrolled={!inView} />
+      <div ref={ref} style={{ height: "1px" }} />
       <SharedHero
         descTitle="I am a front-end developer based in Nigeria with a
               Computer-Science background."
