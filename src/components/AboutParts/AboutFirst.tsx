@@ -1,19 +1,30 @@
 import AboutNav from "../Navigation/AboutNav";
-import { useEffect, useState } from "react";
+// import { useEffect, useState } from "react";
 import SharedHero from "../SharedHero";
 import { useInView } from "react-intersection-observer";
+import aboutVideo from "@/assets/videos/about-video.mp4";
+import { DotLottieReact } from "@lottiefiles/dotlottie-react";
+import globe from "@/assets/lottie/Green_network_globe.json";
+import { useEffect, useRef } from "react";
 
 function ABoutFirst() {
-  const [loaded, setLoaded] = useState(false);
+  // const [loaded, setLoaded] = useState(false);
+  const videoRef = useRef<HTMLVideoElement>(null);
   const { ref, inView } = useInView({
     threshold: 0,
   });
 
+  // useEffect(() => {
+  //   const img = new Image();
+  //   img.src =
+  //     "https://res.cloudinary.com/dlpty7kky/image/upload/f_auto,,w_1000,h_1000,c_fit/v1753188913/Stephen_pezldi.jpg";
+  //   img.onload = () => setLoaded(true);
+  // }, []);
+
   useEffect(() => {
-    const img = new Image();
-    img.src =
-      "https://res.cloudinary.com/dlpty7kky/image/upload/f_auto,,w_1000,h_1000,c_fit/v1753188913/Stephen_pezldi.jpg";
-    img.onload = () => setLoaded(true);
+    if (videoRef.current) {
+      videoRef.current.playbackRate = 2; // 1.5x speed, adjust as needed
+    }
   }, []);
 
   return (
@@ -30,9 +41,32 @@ function ABoutFirst() {
         typeWriterText="ABOUT ME"
       />
       <div className="about-image-skeleton">
-        <section className={`my-image  ${loaded ? "loaded-two" : ""}`}>
-          {/* <img loading="lazy" src={image} alt="" className="about-image" /> */}
-        </section>
+        <video
+          ref={videoRef}
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="my-video"
+        >
+          <source src={aboutVideo} type="video/mp4" />
+        </video>
+
+        {/* Overlay content sits on top of video */}
+        <div className="about-video-overlay">
+          <p className="about-video-tagline">
+            Let's build the future, <br />{" "}
+            <span>One line of code at a time.</span>
+          </p>
+
+          <div className="about-globe-badge">
+            <DotLottieReact data={globe} loop autoplay className="globe-icon" />
+            <div className="globe-badge-text">
+              {/* <span>BASED IN NIGERIA</span> */}
+              <span>OPEN TO REMOTE WORK</span>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );

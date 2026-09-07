@@ -55,7 +55,7 @@ export const projects: ProjectData[] = [
 function SecondSection() {
   return (
     <section
-      className="Second"
+      className="Second noisy-bg"
       id="Projects"
       aria-labelledby="featured-projects"
     >
