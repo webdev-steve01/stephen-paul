@@ -63,7 +63,7 @@ function ABoutFirst() {
             <DotLottieReact data={globe} loop autoplay className="globe-icon" />
             <div className="globe-badge-text">
               {/* <span>BASED IN NIGERIA</span> */}
-              <span>OPEN TO REMOTE WORK</span>
+              <span>OPEN TO REMOTE</span>
             </div>
           </div>
         </div>
