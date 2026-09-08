@@ -1,11 +1,16 @@
 import AboutNav from "../Navigation/AboutNav";
+import { lazy, Suspense } from "react";
 // import { useEffect, useState } from "react";
 import SharedHero from "../SharedHero";
 import { useInView } from "react-intersection-observer";
 import aboutVideo from "@/assets/videos/about-video.mp4";
-import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 import globe from "@/assets/lottie/Green_network_globe.json";
 import { useEffect, useRef } from "react";
+const DotLottieReact = lazy(() =>
+  import("@lottiefiles/dotlottie-react").then((module) => ({
+    default: module.DotLottieReact,
+  })),
+);
 
 function ABoutFirst() {
   // const [loaded, setLoaded] = useState(false);
@@ -60,7 +65,14 @@ function ABoutFirst() {
           </p>
 
           <div className="about-globe-badge">
-            <DotLottieReact data={globe} loop autoplay className="globe-icon" />
+            <Suspense fallback={null}>
+              <DotLottieReact
+                data={globe}
+                loop
+                autoplay
+                className="globe-icon"
+              />
+            </Suspense>
             <div className="globe-badge-text">
               {/* <span>BASED IN NIGERIA</span> */}
               <span>OPEN TO REMOTE</span>

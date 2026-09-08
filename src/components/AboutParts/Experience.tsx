@@ -33,11 +33,10 @@ const experience: ExperienceEntry[] = [
 
 function Experience() {
   return (
-    <div className="capabilities-section" id="Experience">
-      <div>
+    <div className="capabilities-section experience-section" id="Experience">
+      <div className="experience-left">
         <h1 className="capabilities-title">MY EXPERIENCE</h1>
-
-        <p className="connect-text">
+        <p className="connect-text sub-text">
           Check my Resume for all my work experience
         </p>
       </div>

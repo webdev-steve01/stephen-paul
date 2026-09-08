@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+/* ==========================================================================
+   1. RESET & GLOBAL DEFAULTS
+   ========================================================================== */
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -11,317 +15,33 @@
   user-select: none;
   /* cursor: none; */
 }
+
 html {
   scroll-behavior: smooth;
 }
-a {
-  text-underline-offset: 4px;
-}
+
 body {
   background-color: #0a0a0a;
   color: white;
-  /* padding:/ ; */
   width: 100vw;
   font-family: "Manrope", sans-serif;
   overflow-x: hidden;
 }
-.container {
-  max-width: 1300px;
-  margin: 0 auto;
-}
+
 img {
   width: 100%;
   height: 100%;
 }
-.button {
-  border-radius: 50px;
-  padding: 0;
-  background-color: #d3e97a;
-}
-h1,
-h2,
-h3 {
-  font-family: "Roboto Condensed", sans-serif;
-}
-.my-name {
-  font-family: "Edu NSW ACT Hand Pre", cursive;
-}
-.NavList-desktop {
-  list-style: none;
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-.NavList-desktop .NavItem .NavLink {
-  width: 100%;
-  padding: 0.5em;
-  display: block;
-}
-.NavLink:link {
-  color: #c7c7c7;
-  text-decoration: none;
-}
-.NavLink:visited {
-  color: #c7c7c7;
-  text-decoration: none;
-}
-.Navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1em;
-  position: relative;
-  transition: all 0.5s ease-in-out;
-}
-.image-ham {
-  display: none;
-}
-.image-skeleton {
-  margin: 0 auto;
-  background-color: gray;
-  border-radius: 10px;
-  display: flex;
-  min-height: 400px;
-  max-height: 550px;
-  max-width: 450px;
-  min-width: 300px;
-  width: 100%;
-  height: 100%;
-}
-.First-section {
-  padding: 2em 0;
-  display: flex;
-  flex-direction: column;
-  gap: 0.5em;
-  width: 100%;
-}
-.header {
-  font-size: 2em;
-  font-weight: 900;
-  max-width: 330px;
-  line-height: 45px;
-  min-width: 300px;
-  margin: 0;
-}
-.about-intro {
-  line-height: 33px;
-  font-weight: 400;
-  min-width: 330px;
-}
-.linkedin {
-  width: 50px;
-}
-.intro-contact {
-  display: flex;
-  align-items: center;
-  gap: 0.5em;
-}
-.First {
-  display: flex;
-  gap: 1em;
-  justify-content: space-between;
-  border-bottom: 1px solid gray;
-  min-height: 85vh;
-  align-items: center;
-  width: 100%;
-  margin: 0 auto;
-  padding: 0 1em;
-  /* padding-top: 6em; /* reserves the space .Navbar used to occupy in flow */
-}
-.my-image {
-  background: url("https://res.cloudinary.com/dlpty7kky/image/upload/w_100,e_blur:500,q_1/v1770996714/everything_picture_n8hl0i.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  border-radius: 10px;
-  overflow: hidden;
-  width: 100%;
-}
-.my-image-two {
-  background: url("https://res.cloudinary.com/dlpty7kky/image/upload/w_100,e_blur:500,q_1/v1753188913/Stephen_pezldi.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  border-radius: 10px;
-  overflow: hidden;
-  width: 100%;
-}
-.my-image.loaded {
-  background: url("https://res.cloudinary.com/dlpty7kky/image/upload/f_auto,,w_1000,h_1000,c_fit/v1770996714/everything_picture_n8hl0i.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  border-radius: 10px;
-  overflow: hidden;
-  width: 100%;
-}
-.my-image.loaded-two {
-  background: url("https://res.cloudinary.com/dlpty7kky/image/upload/f_auto,,w_1000,h_1000,c_fit/v1753188913/Stephen_pezldi.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  border-radius: 10px;
-  overflow: hidden;
-  width: 100%;
-  height: 200px;
-}
-.inline {
-  display: inline-block;
-}
-.contact-me {
-  display: flex;
-  align-items: center;
-  gap: 0.5em;
-  padding: 0.5em 1em;
-  background-color: #d3e97a;
-  border-radius: 50px;
-  font-size: 0.8em;
-}
-.contact-me:link {
-  background-color: #d3e97a;
-  text-decoration: none;
-  color: black;
-}
-.contact-me:visited {
-  background-color: #d3e97a;
-  text-decoration: none;
-  color: black;
-}
-.company {
-  font-weight: bolder;
-}
-.arrow {
-  width: 40px;
-  height: 40px;
-  padding: 10px;
-  border-radius: 50%;
-  background-color: black;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.connect {
-  padding: 1em;
-}
-.connect-body {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5em;
-}
-.connect-header {
-  font-size: 1.5em;
-}
-.connect-text {
-  color: #c7c7c7;
-}
-.connect-link,
-.connect-link:visited,
-.connect-link:hover {
-  text-decoration: underline;
+
+a {
   text-underline-offset: 4px;
-  text-decoration-color: #d3e97a;
-  color: #c7c7c7;
-}
-.connect-link:link {
-  color: #c7c7c7;
-}
-.Second {
-  padding: 1.5em 1em;
-  border-bottom: 1px solid #c7c7c7;
-}
-.second-article {
-  display: flex;
-  flex-direction: column;
-  gap: 1em;
-  padding-bottom: 2em;
-}
-.second-header {
-  font-size: 1.3em;
-  font-weight: 800;
-}
-.second-text {
-  color: #c7c7c7;
-  line-height: 28px;
-  width: 90%;
-  max-width: 500px;
-  font-size: 0.9em;
-}
-.project-holder {
-  display: flex;
-  flex-direction: column;
-  gap: 1em;
-}
-.about-section,
-.capabilities-section {
-  padding: 1em;
-  /* padding-top: 6em; */
-}
-.about-title {
-  display: none;
-  min-width: 350px;
-  width: 100%;
-}
-.about-text {
-  color: #c7c7c7;
-  line-height: 30px;
-}
-.about-article {
-  display: flex;
-  flex-direction: column;
-  gap: 2em;
-}
-.about-text-head {
-  display: none;
-}
-.more-about-link {
-  color: #d3e97a;
-  text-decoration: none;
-  position: relative;
 }
 
-/* Animated underline */
-.more-about-link::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -3px;
-  width: 100%;
-  height: 1px;
-  background-color: #d3e97a;
-
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 0.3s ease;
-}
-
-.more-about-link:hover::after {
-  transform: scaleX(1);
-}
-.connect-socials {
-  display: flex;
-  gap: 1em;
-}
-.socials-image {
-  width: 30px;
-}
-.connect-form {
-  display: flex;
-  flex-direction: column;
-  gap: 1em;
-  padding: 2em 0;
-}
-.form-child {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-}
-.Input {
-  padding: 12px 16px;
-  background-color: rgba(78, 78, 78, 0.6);
-  color: #c7c7c7;
-  border-radius: 8px;
+label {
   font-size: 16px;
 }
+
+/* Autofill override — kills the browser's default yellow autofill background */
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
@@ -330,449 +50,112 @@ select:-webkit-autofill {
   transition: background-color 9999s ease-in-out 0s;
   -webkit-text-fill-color: #fff !important;
 }
-.Input:focus-within {
-  outline: none;
-}
-label {
-  font-size: 16px;
-}
-.Submit {
-  align-self: flex-start;
-  padding: 0.7em;
-  min-width: 200px;
-  font-size: 1em;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5em;
-}
-.connect-article {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5em;
-}
-.about-title-main {
-  display: flex;
-}
-.about-title-main .about-title-head,
-.capabilities-title {
-  font-size: 2em;
-  font-weight: 800;
-}
-.about-text-head-main {
-  display: flex;
-  font-weight: 500;
-}
-.p-main {
-  font-size: 0.8em;
-}
-.resume-d {
-  display: none;
-}
-.about-main {
-  display: flex;
-  flex-direction: column;
-  gap: 0.4em;
-}
-.download-resume {
-  display: flex;
-  justify-content: flex-start;
-  max-width: 500px;
-  gap: 0.5em;
-  padding: 0.5em 0;
-}
-.black{
-  /* border: 1px solid red; */
-  height: 40px;
-  width: 40px;
-  padding: 0.5em;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #161616;
-  border-radius: 500px;
-}
-.about-image-container {
-  background-color: #c7c7c7;
-  display: grid;
-  place-content: center;
-  margin: auto;
-  border-radius: 16px;
-  overflow: hidden;
-  padding: 1em;
-  min-height: 500px;
-  background: url("./assets/me/Stephen.jpg");
-  background-size: cover;
-  background-position: top;
-  background-repeat: no-repeat;
-}
-.about-image-skeleton {
-  background-color: gray;
-  border-radius: 16px;
-  margin: auto;
-}
-.about-image {
-  max-width: 400px;
-  display: inline-block;
-  border: 1px solid black;
-  border-radius: 50%;
-  margin: auto;
-  display: none;
-}
-.capabilities-text {
-  font-weight: 400;
-  line-height: 30px;
-  font-size: 0.8em;
-}
-.capabilities-list {
-  padding: 1em 0;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5em;
-  max-width: 700px;
-}
-.capabilities-section {
-  padding: 3em 1em;
-}
-.capabilities-list--child {
-  /* border: 1px solid gray; */
-  display: inline-block;
-  border-radius: 23px;
-  padding: 0.5em;
-  font-size: 0.8em;
-}
-.capabilities-title {
-  font-size: 1.5em;
-  padding: 0.5em 0;
-}
-.work-title-and-date {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5em;
-  justify-content: space-between;
-  color: #c7c7c7;
-  font-weight: 500;
-}
-.work {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5em;
-}
-.work-description {
-  color: #c7c7c7;
-  line-height: 30px;
-  display: flex;
-  flex-direction: column;
-  gap: 0.5em;
-}
-.work-description-item {
-  font-size: 0.9em;
-}
-.job {
-  font-size: 0.7em;
-}
-.experience-content {
-  display: flex;
-  flex-direction: column;
-  gap: 2em;
+
+/* ==========================================================================
+   2. TYPOGRAPHY
+   ========================================================================== */
+
+h1,
+h2,
+h3 {
+  font-family: "Roboto Condensed", sans-serif;
 }
 
-/* ! May 2026 new additions */
-.flex-btw{
+.my-name {
+  font-family: "Edu NSW ACT Hand Pre", cursive;
+}
+
+/* ==========================================================================
+   3. LAYOUT UTILITIES
+   ========================================================================== */
+
+.container {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.inline {
+  display: inline-block;
+}
+
+.flex-btw {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.pad-x-2{
-  padding: 0 .5em;
+
+.pad-x-2 {
+  padding: 0 0.5em;
 }
 
-/* ! */
-@media screen and (max-width: 832px) {
-  .NavList-desktop {
-    display: none;
-  }
-  .image-ham {
-    width: 35px;
-    display: block;
-  }
-  .NavList-mobile {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-    position: absolute;
-    top: 60px;
-    bottom: 0;
-    width: 100%;
-
-    height: 250px;
-    right: 0;
-    text-align: center;
-    background-color: #161616;
-    padding: 0.4em 0;
-    border-radius: 8px;
-    overflow: hidden;
-  }
-  .NavList-mobile .NavItem .NavLink {
-    width: 100%;
-    padding: 0.5em;
-    display: block;
-  }
-  .NavLink:link {
-    color: #c7c7c7;
-    text-decoration: none;
-  }
-  .NavLink:visited {
-    color: #c7c7c7;
-    text-decoration: none;
-  }
-  .NavLink:hover {
-    color: #c7c7c7;
-    text-decoration: none;
-    background-color: rgb(18, 18, 18);
-  }
-  .NavItem {
-    width: 100%;
-  }
-  .First {
-    flex-direction: column;
-    padding: 0;
-    padding-bottom: 4em;
-    align-items: flex-start;
-  }
-}
-@media screen and (min-width: 450px) {
-  .first-top {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-  .resume-d {
-    display: inline;
-  }
-  .First-section {
-    width: 70%;
-    max-width: 500px;
-    margin: 0 auto;
-    min-width: 400px;
-  }
-  .intro-contact {
-    align-items: center;
-    justify-content: center;
-  }
-  .header {
-    max-width: 400px;
-    margin: 0 auto;
-  }
-  .my-image {
-    width: 100%;
-    margin: 0 auto;
-  }
-}
-@media screen and (min-width: 800px) {
-  .second-header {
-    font-size: 2em;
-  }
-  .second-text {
-    font-size: 1em;
-  }
-}
-@media screen and (min-width: 1024px) {
-  .about-main {
-    display: flex;
-    flex-direction: row;
-    gap: 1.5em;
-  }
-  .capabilities-title {
-    min-width: 350px;
-  }
-  .about-text-main {
-    display: flex;
-    flex-direction: column;
-    gap: 0.3em;
-  }
-  .about-text-head-main {
-    font-size: 1.5em;
-  }
-  .header {
-    font-size: 2.5em;
-    text-align: left;
-    line-height: 60px;
-    margin: 0 0;
-  }
-  .about-intro {
-    text-align: left;
-  }
-  .intro-contact {
-    margin-right: auto;
-  }
-  .First-section {
-    margin-left: 0;
-  }
-  .capabilities-title {
-    padding: 0;
-  }
-  .my-image {
-    min-height: 500px;
-  }
-  .capabilities-section {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-self: start;
-  }
-  .capabilities-text {
-    max-width: 600px;
-  }
-  .capabilities-title {
-    font-size: 2.5em;
-  }
-  .work-title-and-date {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-  }
-  .work {
-    display: flex;
-    flex-direction: column;
-    gap: 1em;
-  }
-  .work-title-and-date {
-    flex-direction: row;
-  }
-  .experience-content {
-    display: flex;
-    flex-direction: column;
-    gap: 2em;
-    line-height: 30px;
-  }
-  .about-image-container {
-    background-position: center;
-  }
-}
-@media screen and (min-width: 900px) {
-  .about-section {
-    display: flex;
-    padding: 3em 1em;
-    padding-top: 6em;
-    justify-content: space-between;
-  }
-  .about-text-head,
-  .about-title {
-    display: inline;
-    font-weight: 400;
-    font-size: 1.5em;
-  }
-  .about-article {
-    width: 100%;
-  }
-  .about-text-head {
-    font-size: 1.3em;
-    font-weight: 800;
-    line-height: 35px;
-    margin-bottom: 0.5em;
-  }
-  .about-title {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-  }
-  .sub-text{
-    font-size: 12px;
-  }
-  .about-title-head {
-    font-size: 2em;
-  }
-  .connect {
-    display: flex;
-    align-items: flex-start;
-    width: 100%;
-    justify-content: space-between;
-    padding: 2em 1em;
-  }
-  .connect .connect-form {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    padding: 0;
-    max-width: 900px;
-  }
-  .form-child {
-    width: 100%;
-  }
-  .Input {
-    width: 100%;
-  }
-  .connect-body {
-    display: flex;
-    align-items: flex-start;
-    width: 100%;
-  }
-}
-@media screen and (min-width: 500px) {
-  .connect-header {
-    font-size: 2.5em;
-  }
-}
-.fixed {
-  position: fixed;
-  padding: 0.5em 1em;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: #0a0a0a;
-  z-index: 1000;
-  transform: translateY(-100%);
-  animation: slideDown 0.5s ease forwards;
-}
-@keyframes slideDown {
-  to {
-    transform: translateY(0);
-  }
+/* Reusable pill/button base (currently only used for the shared "button" look) */
+.button {
+  border-radius: 50px;
+  padding: 0;
+  background-color: #d3e97a;
 }
 
-.scroll-stack-card {
+/* Subtle grain/noise overlay — apply alongside a background-color */
+.noisy-bg {
   position: relative;
-  width: 100%;
-  box-sizing: border-box;
-
-  transform-origin: top center;
-  will-change: transform, filter;
-
-  backface-visibility: hidden;
-  transform-style: preserve-3d;
+  background-color: #1a1a1a;
 }
-@media screen and (max-width: 750px) {
-  .liquid-ether-wrapper {
-    display: none;
-  }
-}
-.liquid-ether-wrapper {
+
+.noisy-bg::before {
+  content: "";
   position: absolute;
-  top: 0;
-  left: 50%;
-  width: 100vw;
-  /* margin-left: -50vw/; pulls the box left until it hits the true viewport edge, regardless of the parent's width */
-  height: 100%;
-  z-index: 0;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  opacity: 0.05;
   pointer-events: none;
 }
 
-/* * floating hamburger and september 2026 styles*/
+/* ==========================================================================
+   4. NAVBAR (shared by NavBar / AboutNav / ProjectsNav)
+   ========================================================================== */
+
 .Navbar {
-  transition: transform 0.4s ease, opacity 0.4s ease;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em;
+  position: relative;
+  transition:
+    transform 0.4s ease,
+    opacity 0.4s ease;
 }
 
+/* Applied via the `scrolled` prop — slides the full navbar away */
 .navHidden {
   transform: translateY(-100%);
   opacity: 0;
   pointer-events: none;
 }
+
+.NavList-desktop {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.NavList-desktop .NavItem .NavLink {
+  width: 100%;
+  padding: 0.5em;
+  display: block;
+}
+
+.NavLink:link,
+.NavLink:visited {
+  color: #c7c7c7;
+  text-decoration: none;
+}
+
+.image-ham {
+  display: none; /* shown only under the mobile breakpoint, see section 11 */
+}
+
+/* --- Floating magnetic hamburger (appears once the full navbar hides) --- */
 
 .floating-hamburger-wrapper {
   position: fixed;
@@ -803,8 +186,11 @@ label {
 
 .floating-hamburger img {
   width: 30px;
-  height:30px;
+  height: 30px;
 }
+
+/* --- Slide-in menu panel (drawer opened by the floating hamburger) --- */
+
 .floating-menu {
   position: fixed;
   top: 5.5em;
@@ -860,7 +246,7 @@ label {
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  z-index: 10;
+  z-index: 10; /* must beat .menu-links so the close button stays clickable */
 }
 
 .menu-close img {
@@ -874,9 +260,8 @@ label {
   gap: 0.75rem;
   z-index: 1;
   padding-top: 2em;
-  pointer-events: none; 
+  pointer-events: none; /* the box itself shouldn't intercept clicks */
 }
-
 
 .menu-link {
   font-size: clamp(2rem, 6vw, 3rem);
@@ -885,7 +270,7 @@ label {
   text-decoration: none;
   line-height: 1.1;
   transition: color 0.3s ease;
-   pointer-events: auto;
+  pointer-events: auto; /* ...but each actual link still is clickable */
 }
 
 .menu-link:hover {
@@ -926,7 +311,9 @@ label {
   text-decoration: none;
   font-size: 0.85rem;
   font-weight: 600;
-  transition: background-color 0.3s ease, border-color 0.3s ease;
+  transition:
+    background-color 0.3s ease,
+    border-color 0.3s ease;
 }
 
 .menu-social-pill:hover {
@@ -934,40 +321,260 @@ label {
   border-color: white;
 }
 
-@media screen and (max-width: 500px) {
-  .menu-panel {
-    width: 100vw;
-    padding: 2em 1.5em;
+/* ==========================================================================
+   5. HERO / FIRST SECTION
+   ========================================================================== */
+
+.First {
+  display: flex;
+  gap: 1em;
+  justify-content: space-between;
+  border-bottom: 1px solid gray;
+  min-height: 85vh;
+  align-items: center;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 1em;
+}
+
+.First-section {
+  padding: 2em 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  width: 100%;
+}
+
+.header {
+  font-size: 2em;
+  font-weight: 900;
+  max-width: 330px;
+  line-height: 45px;
+  min-width: 300px;
+  margin: 0;
+}
+
+.about-intro {
+  line-height: 33px;
+  font-weight: 400;
+  min-width: 330px;
+}
+
+.intro-contact {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.linkedin {
+  width: 50px;
+}
+
+.contact-me,
+.contact-me:link,
+.contact-me:visited {
+  background-color: #d3e97a;
+  text-decoration: none;
+  color: black;
+}
+
+.contact-me {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  padding: 0.5em 1em;
+  border-radius: 50px;
+  font-size: 0.8em;
+}
+
+.arrow {
+  width: 40px;
+  height: 40px;
+  padding: 10px;
+  border-radius: 50%;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Hero portrait — skeleton box, blur-up placeholder, then full-res swap */
+.image-skeleton {
+  margin: 0 auto;
+  background-color: gray;
+  border-radius: 10px;
+  display: flex;
+  min-height: 400px;
+  max-height: 550px;
+  max-width: 450px;
+  min-width: 300px;
+  width: 100%;
+  height: 100%;
+}
+
+.my-image {
+  background: url("https://res.cloudinary.com/dlpty7kky/image/upload/w_100,e_blur:500,q_1/v1770996714/everything_picture_n8hl0i.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 100%;
+}
+
+.my-image.loaded {
+  background-image: url("https://res.cloudinary.com/dlpty7kky/image/upload/f_auto,,w_1000,h_1000,c_fit/v1770996714/everything_picture_n8hl0i.jpg");
+}
+
+/* Second-image variant, used on the About page's alternate portrait */
+.my-image-two {
+  background: url("https://res.cloudinary.com/dlpty7kky/image/upload/w_100,e_blur:500,q_1/v1753188913/Stephen_pezldi.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 100%;
+}
+
+.my-image.loaded-two {
+  background-image: url("https://res.cloudinary.com/dlpty7kky/image/upload/f_auto,,w_1000,h_1000,c_fit/v1753188913/Stephen_pezldi.jpg");
+  height: 200px;
+}
+
+/* LiquidEther canvas wrapper — full-bleed, escapes any parent's max-width */
+.liquid-ether-wrapper {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 100vw;
+  /*margin-left: -50vw; /* pulls left until it hits the true viewport edge */
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+@media screen and (max-width: 750px) {
+  .liquid-ether-wrapper {
+    display: none; /* skip the WebGL animation on mobile */
   }
 }
 
-.noisy-bg {
-  position: relative;
-  background-color: #1a1a1a; /* your dark base */
+/* ==========================================================================
+   6. PRELOADER
+   ========================================================================== */
+
+.preloader {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background-color: #0a0a0a;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
 }
 
-.noisy-bg::before {
+.preloader-name {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  font-weight: 900;
+  letter-spacing: -0.03em;
+  line-height: 0.95;
+  color: #d3e97a;
+  text-transform: uppercase;
+  padding: 0 1rem;
+  max-width: 100vw;
+}
+
+.preloader-letter {
+  display: inline-block;
+  font-size: clamp(2.5rem, 8vw, 20rem);
+}
+
+.preloader-letter-mask {
+  display: inline-block;
+  overflow: hidden;
+}
+
+.preloader-footer {
+  position: absolute;
+  bottom: 2rem;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 2rem;
+  font-size: 0.85rem;
+  color: #888;
+  letter-spacing: 0.05em;
+}
+
+/* ==========================================================================
+   7. PROJECTS ("Second" section on the homepage + /projects page)
+   ========================================================================== */
+
+.Second {
+  padding: 1.5em 1em;
+  border-bottom: 1px solid #c7c7c7;
+}
+
+.second-article {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  padding-bottom: 2em;
+}
+
+.second-header {
+  font-size: 1.3em;
+  /* font-weight: 800; */
+}
+
+.second-text {
+  color: #c7c7c7;
+  line-height: 28px;
+  width: 90%;
+  max-width: 500px;
+  font-size: 0.9em;
+}
+
+.more-about-link {
+  color: #d3e97a;
+  text-decoration: none;
+  position: relative;
+}
+
+.more-about-link::after {
   content: "";
   position: absolute;
-  inset: 0;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-  opacity: 0.05; /* very subtle */
-  pointer-events: none;
-}
-.about-image-skeleton {
-  width: 100%;      /* or whatever fixed width/height you want the box itself to be */
-  height: 400px;    /* set an actual height for the container */
-  overflow: hidden;
-  border-radius: 12px; /* matches the rounded corners I see in your screenshot */
+  left: 0;
+  bottom: -3px;
+  width: 100%;
+  height: 1px;
+  background-color: #d3e97a;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
 }
 
-.my-video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  border: none;
+.more-about-link:hover::after {
+  transform: scaleX(1);
 }
+
+/* Mobile-only stacked project cards (desktop uses the scroll-spy layout,
+   styled separately in scrollSpy.module.css) */
+.project-holder {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+/* ==========================================================================
+   8. ABOUT PAGE — HERO (video + overlay)
+   ========================================================================== */
 
 .about-image-skeleton {
   position: relative;
@@ -982,6 +589,7 @@ label {
   height: 100%;
   object-fit: cover;
   display: block;
+  border: none;
 }
 
 .about-video-overlay {
@@ -1017,23 +625,21 @@ label {
   font-weight: 800;
   display: block;
 }
-.about-video-tagline span {
-  color: #e8e4d8;
-  font-weight: 700;
-}
 
 .about-globe-badge {
   display: flex;
   align-items: center;
-  gap: 0.85rem;
+  gap: 0.5em;
   align-self: flex-start;
-  padding: 0.65rem 1.1rem;
+  padding: 0.5em 1em;
   background: rgba(255, 255, 255, 0.06);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: 999px;
-  transition: border-color 0.3s ease, background 0.3s ease;
+  transition:
+    border-color 0.3s ease,
+    background 0.3s ease;
 }
 
 .about-globe-badge:hover {
@@ -1077,15 +683,599 @@ label {
   }
 }
 
+/* --- Older about-page portrait variant (about-image-container / about-image) --- */
+
+.about-image-container {
+  background-color: #c7c7c7;
+  display: grid;
+  place-content: center;
+  margin: auto;
+  border-radius: 16px;
+  overflow: hidden;
+  padding: 1em;
+  min-height: 500px;
+  background-image: url("./assets/me/Stephen.jpg");
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+}
+
+.about-image {
+  max-width: 400px;
+  border: 1px solid black;
+  border-radius: 50%;
+  margin: auto;
+  display: none;
+}
+
+.about-title {
+  display: none;
+  min-width: 350px;
+  width: 100%;
+}
+
+.about-text {
+  color: #c7c7c7;
+  line-height: 30px;
+}
+
+.about-article {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+
+.about-text-head {
+  display: none;
+}
+
+.about-main {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4em;
+}
+
+.about-title-main {
+  display: flex;
+}
+
+.about-title-main .about-title-head {
+  font-size: 2em;
+  /* font-weight: 800; */
+}
+
+.about-text-head-main {
+  display: flex;
+  font-weight: 500;
+}
+
+.p-main {
+  font-size: 0.8em;
+}
+
+.resume-d {
+  display: none; /* revealed at the 450px breakpoint */
+}
+
+.download-resume {
+  display: flex;
+  justify-content: flex-start;
+  max-width: 500px;
+  gap: 0.5em;
+  padding: 0.5em 0;
+}
+
+.black {
+  height: 40px;
+  width: 40px;
+  padding: 0.5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #161616;
+  border-radius: 500px;
+}
+
+/* ==========================================================================
+   9. SHARED SECTION HEADER + GRID (Capabilities & Experience)
+   --------------------------------------------------------------------------
+   These two sections deliberately share one grid definition so their
+   left/right columns always line up. If you add a third section using
+   this "title on the left, content on the right" pattern, give it the
+   same `.capabilities-section` class rather than writing a new grid rule
+   — that's what keeps them aligned.
+   ========================================================================== */
+
+.about-section,
+.capabilities-section {
+  padding: 1em;
+}
+
+.capabilities-title {
+  font-size: 1.5em;
+  padding: 0.5em 0;
+}
+
+.capabilities-text {
+  font-weight: 400;
+  line-height: 30px;
+  font-size: 0.8em;
+}
+
+.capabilities-list {
+  padding: 1em 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5em;
+  max-width: 700px;
+}
+
+.capabilities-list--child {
+  display: inline-block;
+  border-radius: 23px;
+  padding: 0.5em;
+  font-size: 0.8em;
+}
+
+/* --- Experience --- */
+
+.experience-left {
+  padding: 1em 0;
+}
+
+.experience-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+
+.work {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+
+.work-title-and-date {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  justify-content: space-between;
+  color: #c7c7c7;
+  font-weight: 500;
+}
+
+.company {
+  font-weight: bolder;
+}
+
+.job {
+  font-size: 0.7em;
+}
+
+.work-description {
+  color: #c7c7c7;
+  line-height: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+
+.work-description-item {
+  font-size: 0.9em;
+}
+
+/* ==========================================================================
+   10. CONNECT / CONTACT FORM
+   ========================================================================== */
+
+.connect {
+  padding: 1em;
+}
+
+.connect-article {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+
+.connect-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+
+.connect-header {
+  font-size: 1.5em;
+}
+
+.connect-text {
+  color: #c7c7c7;
+}
+
+.connect-link,
+.connect-link:visited,
+.connect-link:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  text-decoration-color: #d3e97a;
+  color: #c7c7c7;
+}
+
+.connect-link:link {
+  color: #c7c7c7;
+}
+
+.connect-socials {
+  display: flex;
+  gap: 1em;
+}
+
+.socials-image {
+  width: 30px;
+}
+
+.connect-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  padding: 2em 0;
+}
+
+.form-child {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.Input {
+  padding: 12px 16px;
+  background-color: rgba(78, 78, 78, 0.6);
+  color: #c7c7c7;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.Input:focus-within {
+  outline: none;
+}
+
+.Submit {
+  align-self: flex-start;
+  padding: 0.7em;
+  min-width: 200px;
+  font-size: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5em;
+}
+
+/* ==========================================================================
+   11. SCROLL-DRIVEN EFFECTS (GSAP ScrollTrigger targets)
+   ========================================================================== */
+
+.scroll-stack-card {
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+  transform-origin: top center;
+  will-change: transform, filter;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+}
+
+/* ==========================================================================
+   12. RESPONSIVE BREAKPOINTS
+   --------------------------------------------------------------------------
+   Ordered smallest max-width first, then ascending min-width. Each block
+   is grouped by which component(s) it affects.
+   ========================================================================== */
+
+/* --- ≤832px: mobile nav (hamburger list), hero stacks vertically --- */
+@media screen and (max-width: 832px) {
+  .NavList-desktop {
+    display: none;
+  }
+
+  .image-ham {
+    width: 35px;
+    display: block;
+  }
+
+  .NavList-mobile {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    position: absolute;
+    top: 60px;
+    bottom: 0;
+    width: 100%;
+    height: 250px;
+    right: 0;
+    text-align: center;
+    background-color: #161616;
+    padding: 0.4em 0;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  .NavList-mobile .NavItem .NavLink {
+    width: 100%;
+    padding: 0.5em;
+    display: block;
+  }
+
+  .NavList-mobile .NavLink:link,
+  .NavList-mobile .NavLink:visited {
+    color: #c7c7c7;
+    text-decoration: none;
+  }
+
+  .NavList-mobile .NavLink:hover {
+    background-color: rgb(18, 18, 18);
+  }
+
+  .NavItem {
+    width: 100%;
+  }
+
+  .First {
+    flex-direction: column;
+    padding: 0;
+    padding-bottom: 4em;
+    align-items: flex-start;
+  }
+}
+
+/* --- ≥450px: hero content centers, resume label text appears --- */
+@media screen and (min-width: 450px) {
+  .first-top {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .resume-d {
+    display: inline;
+  }
+
+  .First-section {
+    width: 70%;
+    max-width: 500px;
+    margin: 0 auto;
+    min-width: 400px;
+  }
+
+  .intro-contact {
+    align-items: center;
+    justify-content: center;
+  }
+
+  .header {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  .my-image {
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+/* --- ≥500px: contact header scales up --- */
+@media screen and (min-width: 500px) {
+  .connect-header {
+    font-size: 2.5em;
+  }
+}
+
+/* --- ≥800px: "Featured Projects" header scales up --- */
+@media screen and (min-width: 800px) {
+  .second-header {
+    font-size: 2em;
+  }
+
+  .second-text {
+    font-size: 1em;
+  }
+}
+
+/* --- ≥900px: about-section becomes a row, contact form widens --- */
+@media screen and (min-width: 900px) {
+  .about-section {
+    display: flex;
+    padding: 3em 1em;
+    padding-top: 6em;
+    justify-content: space-between;
+  }
+
+  .about-text-head,
+  .about-title {
+    display: inline;
+    font-weight: 400;
+    font-size: 1.5em;
+  }
+
+  .about-article {
+    width: 100%;
+  }
+
+  .about-text-head {
+    font-size: 1.3em;
+    font-weight: 800;
+    line-height: 35px;
+    margin-bottom: 0.5em;
+  }
+
+  .about-title {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .about-title-head {
+    font-size: 2em;
+  }
+
+  .sub-text {
+    font-size: 14px;
+  }
+
+  .connect {
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+    justify-content: space-between;
+    padding: 2em 1em;
+  }
+
+  .connect .connect-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    max-width: 900px;
+  }
+
+  .form-child {
+    width: 100%;
+  }
+
+  .Input {
+    width: 100%;
+  }
+
+  .connect-body {
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+  }
+}
+
+/* --- ≥1024px: hero goes side-by-side, and the shared
+       Capabilities/Experience grid is defined here.
+       THIS is the fix for the alignment bug — one grid-template-columns
+       value shared by both sections, instead of two competing rules. --- */
+@media screen and (min-width: 1024px) {
+  .header {
+    font-size: 2.5em;
+    text-align: left;
+    line-height: 60px;
+    margin: 0 0;
+  }
+
+  .about-intro {
+    text-align: left;
+  }
+
+  .intro-contact {
+    margin-right: auto;
+  }
+
+  .First-section {
+    margin-left: 0;
+  }
+
+  .my-image {
+    min-height: 500px;
+  }
+
+  .about-image-container {
+    background-position: center;
+  }
+
+  .about-main {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5em;
+  }
+
+  .about-text-main {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3em;
+  }
+
+  .about-text-head-main {
+    font-size: 1.5em;
+  }
+
+  /* Shared title/content grid — see the section 9 comment above */
+  .capabilities-section,
+  .experience-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .capabilities-left,
+  .experience-left {
+    width: 100%;
+    min-width: 350px;
+  }
+
+  .capabilities-content,
+  .experience-content {
+    width: 100%;
+  }
+  .capabilities-title {
+    min-width: 350px;
+    padding: 0;
+    font-size: 2.5em;
+  }
+
+  .capabilities-text {
+    max-width: 600px;
+  }
+
+  .work-title-and-date {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .work {
+    gap: 1em;
+  }
+
+  .experience-content {
+    gap: 2em;
+    line-height: 30px;
+  }
+
+  /* Experience-only: pins "MY EXPERIENCE" while its content scrolls */
+  .experience-left {
+    position: sticky;
+    top: 6em;
+  }
+}
+
+/* --- ≤640px: about-page video hero shrinks --- */
 @media (max-width: 640px) {
   .about-image-skeleton {
     height: 380px;
   }
+
   .about-video-overlay {
     padding: 1.5rem;
   }
+
   .globe-icon {
     width: 26px;
     height: 26px;
+  }
+}
+
+/* --- ≤500px: menu panel goes full-width --- */
+@media screen and (max-width: 500px) {
+  .menu-panel {
+    width: 100vw;
+    padding: 2em 1.5em;
   }
 }

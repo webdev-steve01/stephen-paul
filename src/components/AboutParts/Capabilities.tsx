@@ -17,7 +17,9 @@ function Capabilities() {
   ];
   return (
     <div id="Capabilities" className="capabilities-section">
-      <h1 className="capabilities-title">MY CAPABILITIES</h1>
+      <div className="capabilities-left">
+        <h1 className="capabilities-title">MY CAPABILITIES</h1>
+      </div>
       <div className="capabilities-content">
         <p className="capabilities-text">
           I'm a front-end developer with a Computer Science background, skilled
@@ -29,7 +31,7 @@ function Capabilities() {
         </p>
         <div className="capabilities-list">
           {capabilities.map((capability) => (
-            <SHinyButton text={capability} />
+            <SHinyButton key={capability} text={capability} />
           ))}
         </div>
       </div>
